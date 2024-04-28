@@ -1,4 +1,23 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors');
+
+safelist: [
+  'w-64',
+  'w-1/2',
+  'rounded-l-lg',
+  'rounded-r-lg',
+  'bg-gray-200',
+  'grid-cols-4',
+  'grid-cols-7',
+  'h-6',
+  'leading-6',
+  'h-9',
+  'leading-9',
+  'shadow-lg',
+  'text-red-600'
+]
+
+darkMode: 'class'
 
 module.exports = {
   content: [
@@ -9,10 +28,23 @@ module.exports = {
     './node_modules/flowbite/**/*.js'
   ],
   theme: {
+    colors: {
+      gray: colors.gray,
+      blue: colors.sky,
+      pink: colors.fuchsia,
+    },
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Graphik', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
       },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
     },
   },
   plugins: [
