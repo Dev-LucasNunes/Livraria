@@ -1,0 +1,10 @@
+<div id="alert" data-controller="custom-alert">
+  <div data-custom-alert-target="alert" class="hidden p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">
+    <span class="font-medium">Atenção!</span> Tem certeza que deseja excluir este autor?
+    <div class="flex justify-end mt-2">
+      <button data-action="click->custom-alert#hideAlert">Não</button>
+      <button data-action="click->custom-alert#hideAlert">Sim</button>
+    </div>
+  </div>
+</div>
+
