@@ -1,0 +1,58 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div class="flex justify-between items-center mt-10">
+    <h1 class="font-bold text-4xl text-blue-600">Autores</h1>
+    <%= link_to "New author", new_author_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+ <div id="authors" class="min-w-full mt-10">
+   <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left rtl:text-right text-white dark:text-gray-400">
+      <thead class="text-xs uppercase bg-gray-700 text-gray-300">
+        <tr>
+          <th scope="col" class="px-6 py-3">
+            Nome
+          </th>
+          <th scope="col" class="px-6 py-3">
+             Nacionalidade
+          </th>
+           <th scope="col" class="px-6 py-3">
+               CPF
+           </th>
+           <th scope="col" class="px-6 py-3">
+               Data de Nascimento
+           </th>
+           <th scope="col" class="px-6 py-3">
+                  <span class="sr-only">Edit</span>
+           </th>
+        </tr>
+      </thead>
+            <tbody>
+            <% @authors.each do |author| %>
+              <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
+                <td class="px-6 py-4 font-medium whitespace-nowrap text-white">
+                  <%= author.name %>
+                </td>
+                <td class="px-6 py-4">
+                  <%= author.nationality %>
+                </td>
+                <td class="px-6 py-4">
+                  <%= author.cpf %>
+                </td>
+                <td class="px-6 py-4">
+                  <%= author.date_of_birth %>
+                </td>
+                <td class="px-6 py-4 text-right">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
