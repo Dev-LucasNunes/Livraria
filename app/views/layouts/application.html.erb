@@ -50,6 +50,16 @@
       <%= yield %>
   </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.turbo.min.js"></script>
+  <% if notice.present? %>
+    <script>
+        const alert = document.querySelector('#danger')
+        setTimeout( ()=>{
+            alert.style.display = "none";
+            console.log("show")
+        }, 3000);
+    </script>
+  <% end %>
+
   </body>
 
 
