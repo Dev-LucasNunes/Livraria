@@ -1,15 +1,22 @@
 <%= form_with(model: author, class: "contents") do |form| %>
   <% if author.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(author.errors.count, "error") %> prohibited this author from being saved:</h2>
-
       <ul>
         <% author.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <% formatted_message = error.full_message %>
+          <% if formatted_message.include?("of birth") %>
+            <% formatted_message = formatted_message.gsub("Date of birth", "") %>
+          <% else %>
+            <% formatted_message = formatted_message.gsub(/\A[A-Za-z]+ /, '') %>
+          <% end %>
+          <li><%= formatted_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
+
+
+
 
   <div class="my-5">
     <%= form.label :name %>
