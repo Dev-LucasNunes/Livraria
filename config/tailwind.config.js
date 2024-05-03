@@ -1,24 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors');
 
-safelist: [
-  'w-64',
-  'w-1/2',
-  'rounded-l-lg',
-  'rounded-r-lg',
-  'bg-gray-200',
-  'grid-cols-4',
-  'grid-cols-7',
-  'h-6',
-  'leading-6',
-  'h-9',
-  'leading-9',
-  'shadow-lg',
-  'text-red-600'
-]
-
-darkMode: 'class'
-
 module.exports = {
   content: [
     './public/*.html',
@@ -27,6 +9,21 @@ module.exports = {
     './app/views/**/*.{erb,haml,html,slim}',
     './node_modules/flowbite/**/*.js'
   ],
+  safelist: [
+    'w-64',
+    'w-1/2',
+    'rounded-l-lg',
+    'rounded-r-lg',
+    'bg-gray-200',
+    'grid-cols-4',
+    'grid-cols-7',
+    'h-6',
+    'leading-6',
+    'h-9',
+    'leading-9',
+    'shadow-lg',
+  ],
+  darkMode: 'class',
   theme: {
     colors: {
       gray: colors.gray,
