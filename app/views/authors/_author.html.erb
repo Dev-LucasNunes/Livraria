@@ -18,7 +18,7 @@
 
   <div class="flex items-center mb-2 justify-center">
     <strong class="text-2xl mr-2 text-white">Data de Nascimento:</strong>
-    <span class="text-2xl text-gray-200"><%= author.date_of_birth %></span>
+    <span class="text-2xl text-gray-200"><%= author.date_of_birth.strftime("%d/%m/%Y") if author.date_of_birth.present? %></span>
   </div>
   <div class="flex justify-center mt-2 mb-2">
     <%= link_to edit_author_path(author) do %>

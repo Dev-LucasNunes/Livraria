@@ -45,7 +45,7 @@
                   <span class="text-1xl text-gray-200"><%= cpf_object.formatted %></span>
                 </td>
                 <td class="px-16 py-4">
-                  <%= author.date_of_birth %>
+                  <%= author.date_of_birth.strftime("%d/%m/%Y") if author.date_of_birth.present? %>
                 </td>
                 <td class="py-4 text-right">
                   <div class="flex justify-end mr-5">

@@ -20381,3 +20381,324 @@ Processing by AuthorsController#index as TURBO_STREAM
 Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 4304)
 
 
+Started GET "/" for 127.0.0.1 at 2024-05-02 18:58:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 294)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 40909)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 47751)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-02 18:58:03 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 125.4ms | Allocations: 105655)
+  Rendered layout layouts/application.html.erb (Duration: 126.4ms | Allocations: 106339)
+Completed 200 OK in 147ms (Views: 122.0ms | ActiveRecord: 5.2ms | Allocations: 120964)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-05-02 18:58:04 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 5.0ms | Allocations: 3294)
+  Rendered authors/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3675)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4352)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4874)
+
+
+Started POST "/authors" for 127.0.0.1 at 2024-05-02 18:58:16 -0300
+Processing by AuthorsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"name"=>"Raphael Montes", "nationality"=>"EUA", "cpf"=>"", "date_of_birth"=>"2024-05-15"}, "commit"=>"Confirmar"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 4.5ms | Allocations: 2484)
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2582)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3293)
+Completed 422 Unprocessable Entity in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 5254)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-03 17:33:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 294)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 38439)
+Completed 200 OK in 59ms (Views: 52.3ms | ActiveRecord: 0.0ms | Allocations: 45267)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-03 17:33:19 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 116.9ms | Allocations: 107830)
+  Rendered layout layouts/application.html.erb (Duration: 118.0ms | Allocations: 108514)
+Completed 200 OK in 139ms (Views: 104.8ms | ActiveRecord: 13.8ms | Allocations: 122993)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-03 17:33:26 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3420)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4054)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.6ms | Allocations: 4436)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-03 17:33:27 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 832)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1137)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-03 17:33:28 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 850)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1160)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-03 17:33:31 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 840)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1150)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-03 17:33:33 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3265)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3897)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 4227)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-05-03 17:33:50 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 9.3ms | Allocations: 5403)
+  Rendered authors/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 5784)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 6459)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 6931)
+
+
+Started POST "/authors" for 127.0.0.1 at 2024-05-03 17:33:52 -0300
+Processing by AuthorsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"name"=>"", "nationality"=>"", "cpf"=>"", "date_of_birth"=>""}, "commit"=>"Confirmar"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 6.5ms | Allocations: 2989)
+  Rendered authors/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3087)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3798)
+Completed 422 Unprocessable Entity in 12ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 5676)
+
+
+Started POST "/authors" for 127.0.0.1 at 2024-05-03 17:33:59 -0300
+Processing by AuthorsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"name"=>"", "nationality"=>"", "cpf"=>"3571070380", "date_of_birth"=>""}, "commit"=>"Confirmar"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 4.0ms | Allocations: 2509)
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2599)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3279)
+Completed 422 Unprocessable Entity in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4554)
+
+
+Started POST "/authors" for 127.0.0.1 at 2024-05-03 17:34:05 -0300
+Processing by AuthorsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"name"=>"", "nationality"=>"", "cpf"=>"35710703800", "date_of_birth"=>""}, "commit"=>"Confirmar"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 3.9ms | Allocations: 2294)
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2384)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3064)
+Completed 422 Unprocessable Entity in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 4342)
+
+
+Started POST "/authors" for 127.0.0.1 at 2024-05-03 17:34:09 -0300
+Processing by AuthorsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"name"=>"", "nationality"=>"", "cpf"=>"357107038003", "date_of_birth"=>""}, "commit"=>"Confirmar"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 4.0ms | Allocations: 2509)
+  Rendered authors/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2599)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3279)
+Completed 422 Unprocessable Entity in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 4534)
+
+
+Started POST "/authors" for 127.0.0.1 at 2024-05-03 17:34:14 -0300
+Processing by AuthorsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"name"=>"", "nationality"=>"", "cpf"=>"35710703803", "date_of_birth"=>""}, "commit"=>"Confirmar"}
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 2.2ms | Allocations: 2412)
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2502)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 3182)
+Completed 422 Unprocessable Entity in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 4457)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-03 17:34:21 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 830)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1135)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-03 17:34:21 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3345)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3977)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 4309)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-03 17:34:23 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3268)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3900)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 4230)
+
+
+Started GET "/authors/80" for 127.0.0.1 at 2024-05-03 17:34:26 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"80"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 1.6ms | Allocations: 733)
+  Rendered authors/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1756)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2418)
+Completed 200 OK in 21ms (Views: 6.6ms | ActiveRecord: 0.4ms | Allocations: 7302)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-03 17:34:31 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 897)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1237)
+
+
+Started GET "/authors/80" for 127.0.0.1 at 2024-05-03 17:35:55 -0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"80"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.8ms | Allocations: 735)
+  Rendered authors/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 9426)
+Completed 200 OK in 15ms (Views: 6.4ms | ActiveRecord: 1.8ms | Allocations: 17633)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-03 17:35:57 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1151)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1694)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-03 17:35:59 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3964)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4596)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 5012)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-03 17:36:03 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3255)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3887)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 4217)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-03 17:36:03 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 836)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1141)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-03 17:36:04 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3273)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3905)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 4235)
+
+
+Started DELETE "/authors/80" for 127.0.0.1 at 2024-05-03 17:36:07 -0300
+Processing by AuthorsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"80"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:52:in `destroy'
+  [1m[36mAuthor Destroy (2.4ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = $1[0m  [["id", 80]]
+  ↳ app/controllers/authors_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/authors
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms | Allocations: 2864)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-03 17:36:07 -0300
+Processing by AuthorsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  Rendered shared/_custom_alert.html.erb (Duration: 0.4ms | Allocations: 110)
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3317)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3949)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 4331)
+
+
