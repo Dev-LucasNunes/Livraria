@@ -26,6 +26,12 @@
           <th scope="col" class="px-16 py-3">
             Data de publicação
           </th>
+          <th scope="col" class="px-16 py-3">
+            ISBN
+          </th>
+          <th scope="col" class="px-16 py-3">
+            Foto
+          </th>
           <th scope="col" class="px-6 py-3">
             <span class="sr-only">Edit</span>
           </th>
@@ -38,13 +44,23 @@
               <%= link_to book.title, book %>
             </td>
             <td class="px-16 py-4">
-              <%= book.author_id  %>
+              <%= book.author.name  %>
             </td>
             <td class="px-16 py-4">
               <%= book.genre %>
             </td>
             <td class="px-16 py-4">
               <%= book.publication_date.strftime("%d/%m/%Y") if book.publication_date.present? %>
+            </td>
+            <td class="px-16 py-4">
+              <%= book.isbn %>
+            </td>
+            <td class="px-16 py-4">
+              <% if book.photo.present? && book.photo.attached? %>
+                <%= image_tag book.photo.variant(resize_to_fill: [75, 100]) %>
+              <% else %>
+                Sem imagem
+              <% end %>
             </td>
             <td class="py-4 text-right">
               <div class="flex justify-end mr-5">

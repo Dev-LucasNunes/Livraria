@@ -6,7 +6,7 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Author:</strong>
-    <%= book.author_id %>
+    <%= book.author.name %>
   </p>
 
   <p class="my-5">
@@ -19,9 +19,23 @@
     <%= book.publication_date %>
   </p>
 
+  <p class="my-5">
+    <strong class="block font-medium mb-1">ISBN:</strong>
+    <%= book.isbn %>
+  </p>
+
+  <td class="my-5">
+    <strong class="block font-medium mb-1">Capa:</strong>
+    <% if book.photo.present? && book.photo.attached? %>
+      <%= image_tag book.photo.variant(resize_to_fill: [75, 100]) %>
+    <% else %>
+      Sem imagem
+    <% end %>
+  </td>
+
   <% if action_name != "show" %>
-    <%= link_to "Show this book", book, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to "Edit this book", edit_book_path(book), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Mostrar livro", book, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Editar livro", edit_book_path(book), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
     <hr class="mt-6">
   <% end %>
 </div>

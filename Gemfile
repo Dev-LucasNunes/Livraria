@@ -70,4 +70,7 @@ gem "tailwindcss-rails", "~> 2.4"
 gem 'rspec-rails', group: [:development, :test]
 gem 'cpf_cnpj'
 gem 'countries'
+gem 'image_processing', '~> 1.2'
+gem 'isbn_validation'
+
 
