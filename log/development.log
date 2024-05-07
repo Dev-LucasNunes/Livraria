@@ -29991,3 +29991,1216 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 42ms (Views: 35.2ms | ActiveRecord: 6.0ms | Allocations: 24430)
 
 
+Started GET "/books/new" for 127.0.0.1 at 2024-05-07 15:56:04 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 11.2ms | Allocations: 8528)
+  Rendered books/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 8871)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 16902)
+Completed 200 OK in 51ms (Views: 16.5ms | ActiveRecord: 5.9ms | Allocations: 34985)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-07 15:56:33 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 9.0ms | Allocations: 8530)
+  Rendered books/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 8868)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 16852)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 3.5ms | Allocations: 34908)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-07 16:01:40 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 8.8ms | Allocations: 8536)
+  Rendered books/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 8875)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 16906)
+Completed 200 OK in 30ms (Views: 13.3ms | ActiveRecord: 3.5ms | Allocations: 34956)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-07 16:01:48 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 9.6ms | Allocations: 8532)
+  Rendered books/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 8871)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 16901)
+Completed 200 OK in 32ms (Views: 13.1ms | ActiveRecord: 5.7ms | Allocations: 34955)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-07 16:01:51 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 9.3ms | Allocations: 8523)
+  Rendered books/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 8862)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 16845)
+Completed 200 OK in 30ms (Views: 13.0ms | ActiveRecord: 5.6ms | Allocations: 34891)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:02:01 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 35.9ms | Allocations: 23178)
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 23915)
+Completed 200 OK in 38ms (Views: 31.9ms | ActiveRecord: 5.6ms | Allocations: 24448)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-07 16:02:54 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 4082)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4746)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 5414)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-07 16:03:00 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3260)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3892)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 4222)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:03:01 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5755)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 6439)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.1ms | Allocations: 6770)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--c467a2e7877ed069b2d09e7cdaf6ab10d57398b2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:03:02 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--c467a2e7877ed069b2d09e7cdaf6ab10d57398b2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 1], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: lhmiom4yg49l72qicktqho21h7dh (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJsaG1pb200eWc0OWw3MnFpY2t0cWhvMjFoN2RoIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjA4OjAyLjI2NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--abb157bb56b9f859c21d96df640870295fca95bb/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJsaG1pb200eWc0OWw3MnFpY2t0cWhvMjFoN2RoIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjA4OjAyLjI2NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--abb157bb56b9f859c21d96df640870295fca95bb/jantar_.jpg
+Completed 302 Found in 18ms (ActiveRecord: 3.7ms | Allocations: 14265)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJsaG1pb200eWc0OWw3MnFpY2t0cWhvMjFoN2RoIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjA4OjAyLjI2NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--abb157bb56b9f859c21d96df640870295fca95bb/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:03:02 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-07 16:03:15 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3467)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4128)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 4509)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-07 16:03:17 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3262)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3894)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 4224)
+
+
+Started DELETE "/books/1" for 127.0.0.1 at 2024-05-07 16:03:20 -0300
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mBook Destroy (0.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 4824)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:03:20 -0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3835)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4546)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 4967)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-07 16:03:39 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 4.3ms | Allocations: 2438)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2523)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3155)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 3495)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:03:52 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 3728)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 4412)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.8ms | Allocations: 4742)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-05-07 16:04:01 -0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O jantar secreto", "author_id"=>"81", "genre"=>"Terror", "publication_date"=>"2024-05-23", "isbn"=>"9788543808031", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000731d471a7ea8 @tempfile=#<Tempfile:/tmp/RackMultipart20240507-8067-53mpoc.jpg>, @content_type="image/jpeg", @original_filename="jantar_.jpg", @headers="Content-Disposition: form-data; name=\"book[photo]\"; filename=\"jantar_.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Criar livro"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mBook Create (1.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author_id", "genre", "publication_date", "created_at", "updated_at", "isbn", "photo") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "O jantar secreto"], ["author_id", 81], ["genre", "Terror"], ["publication_date", "2024-05-23"], ["created_at", "2024-05-07 19:04:01.412169"], ["updated_at", "2024-05-07 19:04:01.412169"], ["isbn", "9788543808031"], ["photo", nil]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "z917q57bafqb1x4ihau7q6extwsj"], ["filename", "jantar_.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 62379], ["checksum", "xdG5uj//MP+b/u5Bi1qL0Q=="], ["created_at", "2024-05-07 19:04:01.422077"]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photo"], ["record_type", "Book"], ["record_id", 4], ["blob_id", 7], ["created_at", "2024-05-07 19:04:01.424817"]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mBook Update (0.2ms)[0m  [1m[33mUPDATE "books" SET "updated_at" = $1 WHERE "books"."id" = $2[0m  [["updated_at", "2024-05-07 19:04:01.427054"], ["id", 4]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+[36m  Disk Storage (0.8ms) [0m[32mUploaded file to key: z917q57bafqb1x4ihau7q6extwsj (checksum: xdG5uj//MP+b/u5Bi1qL0Q==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 53d458af-fa0c-4cea-ac50-8e5290cdfdfa) to Async(default) with arguments: #<GlobalID:0x0000731d5c81a9b0 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/7>>
+[ActiveJob] ↳ app/controllers/books_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/books/4
+Completed 302 Found in 57ms (ActiveRecord: 3.3ms | Allocations: 14685)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2024-05-07 16:04:01 -0300
+[ActiveJob] [ActiveStorage::AnalyzeJob] [53d458af-fa0c-4cea-ac50-8e5290cdfdfa]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [53d458af-fa0c-4cea-ac50-8e5290cdfdfa] Performing ActiveStorage::AnalyzeJob (Job ID: 53d458af-fa0c-4cea-ac50-8e5290cdfdfa) from Async(default) enqueued at 2024-05-07T19:04:01.461420642Z with arguments: #<GlobalID:0x0000731d5847e5a8 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/7>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [53d458af-fa0c-4cea-ac50-8e5290cdfdfa] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: z917q57bafqb1x4ihau7q6extwsj[0m
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [53d458af-fa0c-4cea-ac50-8e5290cdfdfa]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [53d458af-fa0c-4cea-ac50-8e5290cdfdfa]   [1m[36mActiveStorage::Blob Update (0.9ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":732,\"height\":1000,\"analyzed\":true}"], ["id", 7]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [53d458af-fa0c-4cea-ac50-8e5290cdfdfa]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 7]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [53d458af-fa0c-4cea-ac50-8e5290cdfdfa]   [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1[0m  [["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [53d458af-fa0c-4cea-ac50-8e5290cdfdfa]   [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "updated_at" = $1 WHERE "books"."id" = $2[0m  [["updated_at", "2024-05-07 19:04:01.493416"], ["id", 4]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+[ActiveJob] [ActiveStorage::AnalyzeJob] [53d458af-fa0c-4cea-ac50-8e5290cdfdfa]   [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [53d458af-fa0c-4cea-ac50-8e5290cdfdfa] Performed ActiveStorage::AnalyzeJob (Job ID: 53d458af-fa0c-4cea-ac50-8e5290cdfdfa) from Async(default) in 27.53ms
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 7.2ms | Allocations: 6281)
+  Rendered books/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 7765)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 8689)
+Completed 200 OK in 24ms (Views: 11.0ms | ActiveRecord: 4.7ms | Allocations: 16771)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NywicHVyIjoiYmxvYl9pZCJ9fQ==--efb6c7de8723c150f50b059ef8484feed4997d3e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6WzE1MCwyMDBdfSwicHVyIjoidmFyaWF0aW9uIn19--14f9865797b5d8a4b0d67c5dcd88bfba8469f074/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:04:01 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NywicHVyIjoiYmxvYl9pZCJ9fQ==--efb6c7de8723c150f50b059ef8484feed4997d3e", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 7], ["variation_digest", "JlnUYwwXl404aI4FDrmExYfV5oU="], ["LIMIT", 1]]
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: z917q57bafqb1x4ihau7q6extwsj[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::VariantRecord Create (2.7ms)[0m  [1m[32mINSERT INTO "active_storage_variant_records" ("blob_id", "variation_digest") VALUES ($1, $2) RETURNING "id"[0m  [["blob_id", 7], ["variation_digest", "JlnUYwwXl404aI4FDrmExYfV5oU="]]
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "3qrdnuwt6wmjks38d1dwgvysqc99"], ["filename", "jantar_.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 7394], ["checksum", "LWaWRR3CvatfHG2JcFQq8w=="], ["created_at", "2024-05-07 19:04:01.604109"]]
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "ActiveStorage::VariantRecord"], ["record_id", 6], ["blob_id", 8], ["created_at", "2024-05-07 19:04:01.606942"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+[36m  Disk Storage (0.5ms) [0m[32mUploaded file to key: 3qrdnuwt6wmjks38d1dwgvysqc99 (checksum: LWaWRR3CvatfHG2JcFQq8w==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0) to Async(default) with arguments: #<GlobalID:0x0000731d4712b150 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/8>>
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: 3qrdnuwt6wmjks38d1dwgvysqc99 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIzcXJkbnV3dDZ3bWprczM4ZDFkd2d2eXNxYzk5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjA5OjAxLjYxNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bec3518936beca357e82fa2ad29283a9ace1e9e0/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIzcXJkbnV3dDZ3bWprczM4ZDFkd2d2eXNxYzk5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjA5OjAxLjYxNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bec3518936beca357e82fa2ad29283a9ace1e9e0/jantar_.jpg
+Completed 302 Found in 93ms (ActiveRecord: 5.3ms | Allocations: 17986)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIzcXJkbnV3dDZ3bWprczM4ZDFkd2d2eXNxYzk5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjA5OjAxLjYxNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bec3518936beca357e82fa2ad29283a9ace1e9e0/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:04:01 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 226)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0] Performing ActiveStorage::AnalyzeJob (Job ID: bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0) from Async(default) enqueued at 2024-05-07T19:04:01.613339570Z with arguments: #<GlobalID:0x0000731d47054510 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/8>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: 3qrdnuwt6wmjks38d1dwgvysqc99[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0]   [1m[36mActiveStorage::Blob Update (1.2ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":150,\"height\":200,\"analyzed\":true}"], ["id", 8]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 8]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0]   [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0]   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0] Performed ActiveStorage::AnalyzeJob (Job ID: bd9f149c-8a8a-4a8f-aa89-a2a574b7abe0) from Async(default) in 15.93ms
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:05:09 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 37.0ms | Allocations: 33781)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 41831)
+Completed 200 OK in 54ms (Views: 32.1ms | ActiveRecord: 12.4ms | Allocations: 56054)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NywicHVyIjoiYmxvYl9pZCJ9fQ==--efb6c7de8723c150f50b059ef8484feed4997d3e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:05:10 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NywicHVyIjoiYmxvYl9pZCJ9fQ==--efb6c7de8723c150f50b059ef8484feed4997d3e", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 7], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: z917q57bafqb1x4ihau7q6extwsj[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::VariantRecord Create (1.4ms)[0m  [1m[32mINSERT INTO "active_storage_variant_records" ("blob_id", "variation_digest") VALUES ($1, $2) RETURNING "id"[0m  [["blob_id", 7], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "19gfkc9rion9csb471bvjcc1mc2w"], ["filename", "jantar_.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 2780], ["checksum", "KiOGO0Y900PwTnbjb0Kb+Q=="], ["created_at", "2024-05-07 19:05:10.108964"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "ActiveStorage::VariantRecord"], ["record_id", 7], ["blob_id", 9], ["created_at", "2024-05-07 19:05:10.110783"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+[36m  Disk Storage (0.4ms) [0m[32mUploaded file to key: 19gfkc9rion9csb471bvjcc1mc2w (checksum: KiOGO0Y900PwTnbjb0Kb+Q==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 96baa0e8-4e4e-4b92-b1a9-3e733621e6d2) to Async(default) with arguments: #<GlobalID:0x0000731d4703c168 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/9>>
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: 19gfkc9rion9csb471bvjcc1mc2w (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxOWdma2M5cmlvbjljc2I0NzFidmpjYzFtYzJ3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEwOjEwLjExN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--891869a381228510470e50d504bc2282d871fd0a/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxOWdma2M5cmlvbjljc2I0NzFidmpjYzFtYzJ3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEwOjEwLjExN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--891869a381228510470e50d504bc2282d871fd0a/jantar_.jpg
+Completed 302 Found in 75ms (ActiveRecord: 4.4ms | Allocations: 28761)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxOWdma2M5cmlvbjljc2I0NzFidmpjYzFtYzJ3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEwOjEwLjExN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--891869a381228510470e50d504bc2282d871fd0a/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:05:10 -0300
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96baa0e8-4e4e-4b92-b1a9-3e733621e6d2]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96baa0e8-4e4e-4b92-b1a9-3e733621e6d2] Performing ActiveStorage::AnalyzeJob (Job ID: 96baa0e8-4e4e-4b92-b1a9-3e733621e6d2) from Async(default) enqueued at 2024-05-07T19:05:10.115658776Z with arguments: #<GlobalID:0x0000731d4977ce80 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/9>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96baa0e8-4e4e-4b92-b1a9-3e733621e6d2] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: 19gfkc9rion9csb471bvjcc1mc2w[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96baa0e8-4e4e-4b92-b1a9-3e733621e6d2]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by ActiveStorage::DiskController#show as JPEG
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96baa0e8-4e4e-4b92-b1a9-3e733621e6d2]   [1m[36mActiveStorage::Blob Update (1.9ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":75,\"height\":100,\"analyzed\":true}"], ["id", 9]]
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96baa0e8-4e4e-4b92-b1a9-3e733621e6d2]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 9]]
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 1926)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96baa0e8-4e4e-4b92-b1a9-3e733621e6d2]   [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 7]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96baa0e8-4e4e-4b92-b1a9-3e733621e6d2]   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96baa0e8-4e4e-4b92-b1a9-3e733621e6d2] Performed ActiveStorage::AnalyzeJob (Job ID: 96baa0e8-4e4e-4b92-b1a9-3e733621e6d2) from Async(default) in 13.46ms
+Started DELETE "/books/3" for 127.0.0.1 at 2024-05-07 16:05:13 -0300
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mActiveStorage::Attachment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mBook Destroy (0.2ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: b7ccfbec-86cb-4233-9cd7-93e9ca876481) to Async(default) with arguments: #<GlobalID:0x0000731d4a04bb60 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/1>>
+[ActiveJob] ↳ app/controllers/books_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 16ms (ActiveRecord: 1.6ms | Allocations: 7326)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:05:13 -0300
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481] Performing ActiveStorage::PurgeJob (Job ID: b7ccfbec-86cb-4233-9cd7-93e9ca876481) from Async(default) enqueued at 2024-05-07T19:05:13.641262511Z with arguments: #<GlobalID:0x0000731d4aa091e8 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::VariantRecord Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 3]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::VariantRecord Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 4]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::VariantRecord Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 3]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 5]]
+Processing by BooksController#index as TURBO_STREAM
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::VariantRecord Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 4]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 6]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::VariantRecord Destroy (0.5ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 5]]
+  Rendered shared/_custom_alert.html.erb (Duration: 0.7ms | Allocations: 183)
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  [1m[36mBook Load (2.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Blob Destroy (0.9ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 1]]
+  [1m[36mAuthor Load (1.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481] Enqueued ActiveStorage::PurgeJob (Job ID: 808493cf-0ace-421c-8307-ad0d42a5a963) to Async(default) with arguments: #<GlobalID:0x0000731d5ed8ee08 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/2>>
+  [1m[36mActiveStorage::Blob Load (4.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered books/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 12317)
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481] Enqueued ActiveStorage::PurgeJob (Job ID: fbbac7f1-f8ba-4475-bbad-3d99801aaf21) to Async(default) with arguments: #<GlobalID:0x0000731d4e657500 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/3>>
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 14066)
+Completed 200 OK in 34ms (Views: 21.1ms | ActiveRecord: 10.2ms | Allocations: 16542)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481] Enqueued ActiveStorage::PurgeJob (Job ID: 2812df79-4beb-46a8-a866-93942b84bd49) to Async(default) with arguments: #<GlobalID:0x0000731d4e526488 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481] Enqueued ActiveStorage::PurgeJob (Job ID: 4f867695-ad66-4259-95cc-3a1902c64c0c) to Async(default) with arguments: #<GlobalID:0x0000731d4e48de68 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481]   [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481] Enqueued ActiveStorage::PurgeJob (Job ID: 5a94df53-f65b-4168-966f-5196bfa6a13f) to Async(default) with arguments: #<GlobalID:0x0000731d4e44f2f8 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/6>>
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481] [36m  Disk Storage (0.2ms) [0m[31mDeleted file from key: 2taf3quoatfggm8r3fok4tvdeg7s[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/2taf3quoatfggm8r3fok4tvdeg7s/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b7ccfbec-86cb-4233-9cd7-93e9ca876481] Performed ActiveStorage::PurgeJob (Job ID: b7ccfbec-86cb-4233-9cd7-93e9ca876481) from Async(default) in 77.98ms
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49] Performing ActiveStorage::PurgeJob (Job ID: 2812df79-4beb-46a8-a866-93942b84bd49) from Async(default) enqueued at 2024-05-07T19:05:13.720278544Z with arguments: #<GlobalID:0x0000731d4e38b8a8 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49]   [1m[36mActiveStorage::Attachment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49]   [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 4]]
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49]   [1m[36mActiveStorage::Blob Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 4]]
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49]   [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21]   [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49] [36m  Disk Storage (0.3ms) [0m[31mDeleted file from key: rco13hr0c4r0ztnd6exydn0pn4wl[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21] Performing ActiveStorage::PurgeJob (Job ID: fbbac7f1-f8ba-4475-bbad-3d99801aaf21) from Async(default) enqueued at 2024-05-07T19:05:13.714462165Z with arguments: #<GlobalID:0x0000731d4e259548 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/rco13hr0c4r0ztnd6exydn0pn4wl/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2812df79-4beb-46a8-a866-93942b84bd49] Performed ActiveStorage::PurgeJob (Job ID: 2812df79-4beb-46a8-a866-93942b84bd49) from Async(default) in 12.9ms
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21]   [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21]   [1m[36mActiveStorage::Attachment Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21]   [1m[36mActiveStorage::VariantRecord Load (0.3ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 3]]
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21]   [1m[36mActiveStorage::Blob Destroy (0.4ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 3]]
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21]   [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963]   [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21] [36m  Disk Storage (0.1ms) [0m[31mDeleted file from key: c5d1qcn51hepoul8d5mocjfdgt6k[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963] Performing ActiveStorage::PurgeJob (Job ID: 808493cf-0ace-421c-8307-ad0d42a5a963) from Async(default) enqueued at 2024-05-07T19:05:13.707918075Z with arguments: #<GlobalID:0x0000731d4da4d228 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c]   [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21] [36m  Disk Storage (0.4ms) [0m[31mDeleted files by key prefix: variants/c5d1qcn51hepoul8d5mocjfdgt6k/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c] Performing ActiveStorage::PurgeJob (Job ID: 4f867695-ad66-4259-95cc-3a1902c64c0c) from Async(default) enqueued at 2024-05-07T19:05:13.723493866Z with arguments: #<GlobalID:0x0000731d4da16250 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963]   [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [fbbac7f1-f8ba-4475-bbad-3d99801aaf21] Performed ActiveStorage::PurgeJob (Job ID: fbbac7f1-f8ba-4475-bbad-3d99801aaf21) from Async(default) in 16.74ms
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963]   [1m[36mActiveStorage::Attachment Exists? (3.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c]   [1m[36mActiveStorage::Attachment Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963]   [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c]   [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 5]]
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963]   [1m[36mActiveStorage::Blob Destroy (1.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963]   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963] [36m  Disk Storage (0.8ms) [0m[31mDeleted file from key: 7ny99ad51ed39xcinhou0tzzojny[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c]   [1m[36mActiveStorage::Blob Destroy (0.8ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 5]]
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f] Performing ActiveStorage::PurgeJob (Job ID: 5a94df53-f65b-4168-966f-5196bfa6a13f) from Async(default) enqueued at 2024-05-07T19:05:13.726207006Z with arguments: #<GlobalID:0x0000731d59bba000 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/6>>
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/7ny99ad51ed39xcinhou0tzzojny/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [808493cf-0ace-421c-8307-ad0d42a5a963] Performed ActiveStorage::PurgeJob (Job ID: 808493cf-0ace-421c-8307-ad0d42a5a963) from Async(default) in 17.59ms
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c]   [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f]   [1m[36mActiveStorage::Attachment Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 6], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c] [36m  Disk Storage (0.1ms) [0m[31mDeleted file from key: lhmiom4yg49l72qicktqho21h7dh[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c] [36m  Disk Storage (0.0ms) [0m[31mDeleted files by key prefix: variants/lhmiom4yg49l72qicktqho21h7dh/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f]   [1m[36mActiveStorage::VariantRecord Load (0.6ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 6]]
+[ActiveJob] [ActiveStorage::PurgeJob] [4f867695-ad66-4259-95cc-3a1902c64c0c] Performed ActiveStorage::PurgeJob (Job ID: 4f867695-ad66-4259-95cc-3a1902c64c0c) from Async(default) in 33.34ms
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f]   [1m[36mActiveStorage::Blob Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 6]]
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f]   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f] [36m  Disk Storage (0.1ms) [0m[31mDeleted file from key: x3ejqx4vefe68x20u6528y59wt2u[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f] [36m  Disk Storage (0.0ms) [0m[31mDeleted files by key prefix: variants/x3ejqx4vefe68x20u6528y59wt2u/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5a94df53-f65b-4168-966f-5196bfa6a13f] Performed ActiveStorage::PurgeJob (Job ID: 5a94df53-f65b-4168-966f-5196bfa6a13f) from Async(default) in 12.76ms
+Started GET "/books/4/edit" for 127.0.0.1 at 2024-05-07 16:06:00 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 9.3ms | Allocations: 8698)
+  Rendered books/edit.html.erb within layouts/application (Duration: 9.9ms | Allocations: 9106)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 17127)
+Completed 200 OK in 33ms (Views: 11.8ms | ActiveRecord: 8.2ms | Allocations: 36633)
+
+
+Started PATCH "/books/4" for 127.0.0.1 at 2024-05-07 16:06:07 -0300
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O jantar secreto", "author_id"=>"88", "genre"=>"Terror", "publication_date"=>"2024-05-23", "isbn"=>"9788543808031"}, "commit"=>"Atualizar livro", "id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  [1m[36mBook Update (0.3ms)[0m  [1m[33mUPDATE "books" SET "author_id" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["author_id", 88], ["updated_at", "2024-05-07 19:06:07.314711"], ["id", 4]]
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/books/4
+Completed 302 Found in 11ms (ActiveRecord: 1.4ms | Allocations: 5798)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2024-05-07 16:06:07 -0300
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 26.8ms | Allocations: 18744)
+  Rendered books/show.html.erb within layouts/application (Duration: 29.1ms | Allocations: 19816)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 20534)
+Completed 200 OK in 33ms (Views: 25.6ms | ActiveRecord: 5.2ms | Allocations: 21596)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2024-05-07 16:07:22 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 23.5ms | Allocations: 25323)
+  Rendered books/show.html.erb within layouts/application (Duration: 24.7ms | Allocations: 26432)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 34430)
+Completed 200 OK in 44ms (Views: 24.9ms | ActiveRecord: 6.3ms | Allocations: 53796)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIzcXJkbnV3dDZ3bWprczM4ZDFkd2d2eXNxYzk5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjA5OjAxLjYxNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bec3518936beca357e82fa2ad29283a9ace1e9e0/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:07:22 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 493)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:07:24 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4800)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5512)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.7ms | Allocations: 6004)
+
+
+Started GET "/books/4/edit" for 127.0.0.1 at 2024-05-07 16:07:24 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 5.0ms | Allocations: 3152)
+  Rendered books/edit.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3504)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4181)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 5106)
+
+
+Started PATCH "/books/4" for 127.0.0.1 at 2024-05-07 16:07:31 -0300
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O jantar secreto", "author_id"=>"81", "genre"=>"Terror", "publication_date"=>"2024-05-23", "isbn"=>"9788543808031"}, "commit"=>"Atualizar livro", "id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  [1m[36mBook Update (0.3ms)[0m  [1m[33mUPDATE "books" SET "author_id" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["author_id", 81], ["updated_at", "2024-05-07 19:07:31.485522"], ["id", 4]]
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/books/4
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms | Allocations: 4261)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2024-05-07 16:07:31 -0300
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 5.4ms | Allocations: 2747)
+  Rendered books/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3348)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4028)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 4939)
+
+
+Started DELETE "/books/4" for 127.0.0.1 at 2024-05-07 16:07:37 -0300
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mActiveStorage::Attachment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mBook Destroy (0.2ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:52:in `destroy'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: f114526f-5309-44e6-9fa7-7ce3caa42e84) to Async(default) with arguments: #<GlobalID:0x0000731d5e1de0e0 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/7>>
+[ActiveJob] ↳ app/controllers/books_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 13ms (ActiveRecord: 1.8ms | Allocations: 6612)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:07:37 -0300
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84] Performing ActiveStorage::PurgeJob (Job ID: f114526f-5309-44e6-9fa7-7ce3caa42e84) from Async(default) enqueued at 2024-05-07T19:07:37.830257425Z with arguments: #<GlobalID:0x0000731d48ac02f0 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/7>>
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::Attachment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 7], ["LIMIT", 1]]
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::VariantRecord Load (0.4ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 7]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  Rendered shared/_custom_alert.html.erb (Duration: 0.4ms | Allocations: 190)
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::Attachment Destroy (0.5ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 8]]
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::VariantRecord Destroy (0.5ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 6]]
+  Rendered books/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 7198)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 9872)
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 1.3ms | Allocations: 10644)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::Attachment Destroy (0.9ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 9]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::VariantRecord Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 7]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::Blob Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 7]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84] Enqueued ActiveStorage::PurgeJob (Job ID: 95a14efd-c35d-425c-a1fc-3ef516f43da5) to Async(default) with arguments: #<GlobalID:0x0000731d5d1bd238 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/8>>
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84] Enqueued ActiveStorage::PurgeJob (Job ID: 248bdd75-3616-4cd4-8a9f-145d4c1a7156) to Async(default) with arguments: #<GlobalID:0x0000731d584d1a28 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/9>>
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84] [36m  Disk Storage (0.1ms) [0m[31mDeleted file from key: z917q57bafqb1x4ihau7q6extwsj[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84] [36m  Disk Storage (0.0ms) [0m[31mDeleted files by key prefix: variants/z917q57bafqb1x4ihau7q6extwsj/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f114526f-5309-44e6-9fa7-7ce3caa42e84] Performed ActiveStorage::PurgeJob (Job ID: f114526f-5309-44e6-9fa7-7ce3caa42e84) from Async(default) in 33.79ms
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5]   [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5] Performing ActiveStorage::PurgeJob (Job ID: 95a14efd-c35d-425c-a1fc-3ef516f43da5) from Async(default) enqueued at 2024-05-07T19:07:37.866822350Z with arguments: #<GlobalID:0x0000731d4808b190 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/8>>
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156]   [1m[36mActiveStorage::Blob Load (2.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156] Performing ActiveStorage::PurgeJob (Job ID: 248bdd75-3616-4cd4-8a9f-145d4c1a7156) from Async(default) enqueued at 2024-05-07T19:07:37.869067040Z with arguments: #<GlobalID:0x000060e908800668 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/9>>
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5]   [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156]   [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5]   [1m[36mActiveStorage::Attachment Exists? (22.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 8], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156]   [1m[36mActiveStorage::Attachment Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 9], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5]   [1m[36mActiveStorage::VariantRecord Load (0.8ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 8]]
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156]   [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 9]]
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5]   [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5]   [1m[36mActiveStorage::Blob Destroy (0.9ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 8]]
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156]   [1m[36mActiveStorage::Blob Destroy (0.7ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 9]]
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5]   [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156]   [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5] [36m  Disk Storage (0.1ms) [0m[31mDeleted file from key: 3qrdnuwt6wmjks38d1dwgvysqc99[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156] [36m  Disk Storage (0.1ms) [0m[31mDeleted file from key: 19gfkc9rion9csb471bvjcc1mc2w[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/3qrdnuwt6wmjks38d1dwgvysqc99/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156] [36m  Disk Storage (0.0ms) [0m[31mDeleted files by key prefix: variants/19gfkc9rion9csb471bvjcc1mc2w/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [95a14efd-c35d-425c-a1fc-3ef516f43da5] Performed ActiveStorage::PurgeJob (Job ID: 95a14efd-c35d-425c-a1fc-3ef516f43da5) from Async(default) in 38.4ms
+[ActiveJob] [ActiveStorage::PurgeJob] [248bdd75-3616-4cd4-8a9f-145d4c1a7156] Performed ActiveStorage::PurgeJob (Job ID: 248bdd75-3616-4cd4-8a9f-145d4c1a7156) from Async(default) in 37.45ms
+Started GET "/books/new" for 127.0.0.1 at 2024-05-07 16:07:42 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 5.3ms | Allocations: 2446)
+  Rendered books/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2683)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3315)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 3722)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-05-07 16:07:58 -0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O jantar secreto", "author_id"=>"81", "genre"=>"Terror", "publication_date"=>"2024-05-21", "isbn"=>"9788543808031", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000731d5d91d208 @tempfile=#<Tempfile:/tmp/RackMultipart20240507-8067-js6f6h.jpg>, @content_type="image/jpeg", @original_filename="jantar_.jpg", @headers="Content-Disposition: form-data; name=\"book[photo]\"; filename=\"jantar_.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Criar livro"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author_id", "genre", "publication_date", "created_at", "updated_at", "isbn", "photo") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "O jantar secreto"], ["author_id", 81], ["genre", "Terror"], ["publication_date", "2024-05-21"], ["created_at", "2024-05-07 19:07:58.772728"], ["updated_at", "2024-05-07 19:07:58.772728"], ["isbn", "9788543808031"], ["photo", nil]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "jtaptqcp02kjfk1g6nky95ppy6o1"], ["filename", "jantar_.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 62379], ["checksum", "xdG5uj//MP+b/u5Bi1qL0Q=="], ["created_at", "2024-05-07 19:07:58.779259"]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photo"], ["record_type", "Book"], ["record_id", 5], ["blob_id", 10], ["created_at", "2024-05-07 19:07:58.781263"]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mBook Update (0.2ms)[0m  [1m[33mUPDATE "books" SET "updated_at" = $1 WHERE "books"."id" = $2[0m  [["updated_at", "2024-05-07 19:07:58.782687"], ["id", 5]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+[36m  Disk Storage (0.6ms) [0m[32mUploaded file to key: jtaptqcp02kjfk1g6nky95ppy6o1 (checksum: xdG5uj//MP+b/u5Bi1qL0Q==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 47e204d3-45e8-4fa3-a2e3-d183c4f970e5) to Async(default) with arguments: #<GlobalID:0x0000731d48b061d8 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/10>>
+[ActiveJob] ↳ app/controllers/books_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/books/5
+Completed 302 Found in 29ms (ActiveRecord: 2.8ms | Allocations: 13793)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2024-05-07 16:07:58 -0300
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47e204d3-45e8-4fa3-a2e3-d183c4f970e5]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47e204d3-45e8-4fa3-a2e3-d183c4f970e5] Performing ActiveStorage::AnalyzeJob (Job ID: 47e204d3-45e8-4fa3-a2e3-d183c4f970e5) from Async(default) enqueued at 2024-05-07T19:07:58.795134171Z with arguments: #<GlobalID:0x0000731d5e1e4350 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/10>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47e204d3-45e8-4fa3-a2e3-d183c4f970e5] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: jtaptqcp02kjfk1g6nky95ppy6o1[0m
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 4.1ms | Allocations: 2846)
+  Rendered books/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3813)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4965)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47e204d3-45e8-4fa3-a2e3-d183c4f970e5]   [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 5919)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47e204d3-45e8-4fa3-a2e3-d183c4f970e5]   [1m[36mActiveStorage::Blob Update (2.2ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":732,\"height\":1000,\"analyzed\":true}"], ["id", 10]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47e204d3-45e8-4fa3-a2e3-d183c4f970e5]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 10]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47e204d3-45e8-4fa3-a2e3-d183c4f970e5]   [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1[0m  [["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47e204d3-45e8-4fa3-a2e3-d183c4f970e5]   [1m[36mBook Update (0.2ms)[0m  [1m[33mUPDATE "books" SET "updated_at" = $1 WHERE "books"."id" = $2[0m  [["updated_at", "2024-05-07 19:07:58.825642"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47e204d3-45e8-4fa3-a2e3-d183c4f970e5]   [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47e204d3-45e8-4fa3-a2e3-d183c4f970e5] Performed ActiveStorage::AnalyzeJob (Job ID: 47e204d3-45e8-4fa3-a2e3-d183c4f970e5) from Async(default) in 27.59ms
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6WzE1MCwyMDBdfSwicHVyIjoidmFyaWF0aW9uIn19--14f9865797b5d8a4b0d67c5dcd88bfba8469f074/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:07:58 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 10], ["variation_digest", "JlnUYwwXl404aI4FDrmExYfV5oU="], ["LIMIT", 1]]
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: jtaptqcp02kjfk1g6nky95ppy6o1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::VariantRecord Create (1.9ms)[0m  [1m[32mINSERT INTO "active_storage_variant_records" ("blob_id", "variation_digest") VALUES ($1, $2) RETURNING "id"[0m  [["blob_id", 10], ["variation_digest", "JlnUYwwXl404aI4FDrmExYfV5oU="]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "6hygw66ddtcnddyvuzyzg2v1kgcn"], ["filename", "jantar_.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 7394], ["checksum", "LWaWRR3CvatfHG2JcFQq8w=="], ["created_at", "2024-05-07 19:07:59.084310"]]
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "ActiveStorage::VariantRecord"], ["record_id", 8], ["blob_id", 11], ["created_at", "2024-05-07 19:07:59.086209"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+[36m  Disk Storage (0.4ms) [0m[32mUploaded file to key: 6hygw66ddtcnddyvuzyzg2v1kgcn (checksum: LWaWRR3CvatfHG2JcFQq8w==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 339c821f-dbc2-4853-875d-d520a5228536) to Async(default) with arguments: #<GlobalID:0x0000731d4730f318 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/11>>
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: 6hygw66ddtcnddyvuzyzg2v1kgcn (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI2aHlndzY2ZGR0Y25kZHl2dXp5emcydjFrZ2NuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEyOjU5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b7c1647e843fd6a7cb5a2cf73033cb14163dfdb8/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI2aHlndzY2ZGR0Y25kZHl2dXp5emcydjFrZ2NuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEyOjU5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b7c1647e843fd6a7cb5a2cf73033cb14163dfdb8/jantar_.jpg
+Completed 302 Found in 247ms (ActiveRecord: 4.1ms | Allocations: 18822)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI2aHlndzY2ZGR0Y25kZHl2dXp5emcydjFrZ2NuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEyOjU5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b7c1647e843fd6a7cb5a2cf73033cb14163dfdb8/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:07:59 -0300
+[ActiveJob] [ActiveStorage::AnalyzeJob] [339c821f-dbc2-4853-875d-d520a5228536]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [339c821f-dbc2-4853-875d-d520a5228536] Performing ActiveStorage::AnalyzeJob (Job ID: 339c821f-dbc2-4853-875d-d520a5228536) from Async(default) enqueued at 2024-05-07T19:07:59.090682461Z with arguments: #<GlobalID:0x0000731d47290e78 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/11>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [339c821f-dbc2-4853-875d-d520a5228536] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: 6hygw66ddtcnddyvuzyzg2v1kgcn[0m
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [339c821f-dbc2-4853-875d-d520a5228536]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [339c821f-dbc2-4853-875d-d520a5228536]   [1m[36mActiveStorage::Blob Update (1.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":150,\"height\":200,\"analyzed\":true}"], ["id", 11]]
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 1380)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [339c821f-dbc2-4853-875d-d520a5228536]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 11]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [339c821f-dbc2-4853-875d-d520a5228536]   [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 8]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [339c821f-dbc2-4853-875d-d520a5228536]   [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [339c821f-dbc2-4853-875d-d520a5228536] Performed ActiveStorage::AnalyzeJob (Job ID: 339c821f-dbc2-4853-875d-d520a5228536) from Async(default) in 15.11ms
+Started GET "/books/5" for 127.0.0.1 at 2024-05-07 16:08:25 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 23.5ms | Allocations: 25338)
+  Rendered books/show.html.erb within layouts/application (Duration: 24.8ms | Allocations: 26462)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 34507)
+Completed 200 OK in 46ms (Views: 22.5ms | ActiveRecord: 10.2ms | Allocations: 54045)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI2aHlndzY2ZGR0Y25kZHl2dXp5emcydjFrZ2NuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEyOjU5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b7c1647e843fd6a7cb5a2cf73033cb14163dfdb8/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:08:25 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 493)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2024-05-07 16:09:03 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 19.3ms | Allocations: 25322)
+  Rendered books/show.html.erb within layouts/application (Duration: 20.4ms | Allocations: 26437)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 34435)
+Completed 200 OK in 39ms (Views: 21.1ms | ActiveRecord: 5.9ms | Allocations: 53805)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI2aHlndzY2ZGR0Y25kZHl2dXp5emcydjFrZ2NuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEyOjU5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b7c1647e843fd6a7cb5a2cf73033cb14163dfdb8/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:09:03 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 493)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2024-05-07 16:09:41 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 23.0ms | Allocations: 25323)
+  Rendered books/show.html.erb within layouts/application (Duration: 24.3ms | Allocations: 26436)
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 34434)
+Completed 200 OK in 45ms (Views: 24.7ms | ActiveRecord: 6.4ms | Allocations: 53804)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI2aHlndzY2ZGR0Y25kZHl2dXp5emcydjFrZ2NuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEyOjU5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b7c1647e843fd6a7cb5a2cf73033cb14163dfdb8/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:09:42 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 493)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2024-05-07 16:10:02 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 30.5ms | Allocations: 25322)
+  Rendered books/show.html.erb within layouts/application (Duration: 32.1ms | Allocations: 26435)
+  Rendered layout layouts/application.html.erb (Duration: 38.1ms | Allocations: 34433)
+Completed 200 OK in 60ms (Views: 31.2ms | ActiveRecord: 11.7ms | Allocations: 53861)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI2aHlndzY2ZGR0Y25kZHl2dXp5emcydjFrZ2NuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEyOjU5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b7c1647e843fd6a7cb5a2cf73033cb14163dfdb8/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:10:02 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 493)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2024-05-07 16:10:10 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 27.7ms | Allocations: 25334)
+  Rendered books/show.html.erb within layouts/application (Duration: 29.2ms | Allocations: 26452)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 34498)
+Completed 200 OK in 53ms (Views: 27.0ms | ActiveRecord: 10.9ms | Allocations: 53982)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI2aHlndzY2ZGR0Y25kZHl2dXp5emcydjFrZ2NuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEyOjU5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b7c1647e843fd6a7cb5a2cf73033cb14163dfdb8/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:10:10 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 493)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2024-05-07 16:10:22 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 28.4ms | Allocations: 25322)
+  Rendered books/show.html.erb within layouts/application (Duration: 31.2ms | Allocations: 26442)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 34440)
+Completed 200 OK in 54ms (Views: 29.0ms | ActiveRecord: 10.7ms | Allocations: 53810)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI2aHlndzY2ZGR0Y25kZHl2dXp5emcydjFrZ2NuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjEyOjU5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b7c1647e843fd6a7cb5a2cf73033cb14163dfdb8/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:10:22 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 493)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:10:33 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1211)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1755)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:10:44 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4675)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5359)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.7ms | Allocations: 5775)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2024-05-07 16:10:48 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 5.2ms | Allocations: 3135)
+  Rendered books/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3487)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4115)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 5040)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2024-05-07 16:10:51 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 5.5ms | Allocations: 2747)
+  Rendered books/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3267)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3947)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 4806)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2024-05-07 16:10:53 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 4.2ms | Allocations: 2410)
+  Rendered books/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2524)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3152)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 4011)
+
+
+Started PATCH "/books/5" for 127.0.0.1 at 2024-05-07 16:11:02 -0300
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"O jantar secreto", "author_id"=>"81", "genre"=>"Terror", "publication_date"=>"2024-05-15", "isbn"=>"9788543808031"}, "commit"=>"Atualizar livro", "id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  [1m[36mBook Update (1.4ms)[0m  [1m[33mUPDATE "books" SET "publication_date" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["publication_date", "2024-05-15"], ["updated_at", "2024-05-07 19:11:02.566349"], ["id", 5]]
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/books/5
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms | Allocations: 3353)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2024-05-07 16:11:02 -0300
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:26
+  Rendered books/_book.html.erb (Duration: 5.4ms | Allocations: 2744)
+  Rendered books/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3326)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4006)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.5ms | Allocations: 4917)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-07 16:11:14 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4107)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4771)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 5439)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:11:14 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3869)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4553)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.6ms | Allocations: 4884)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:11:14 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 10], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: jtaptqcp02kjfk1g6nky95ppy6o1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::VariantRecord Create (1.6ms)[0m  [1m[32mINSERT INTO "active_storage_variant_records" ("blob_id", "variation_digest") VALUES ($1, $2) RETURNING "id"[0m  [["blob_id", 10], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "hybwr1n8xv8jazn1nopickci9vso"], ["filename", "jantar_.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 2780], ["checksum", "KiOGO0Y900PwTnbjb0Kb+Q=="], ["created_at", "2024-05-07 19:11:15.048734"]]
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "ActiveStorage::VariantRecord"], ["record_id", 9], ["blob_id", 12], ["created_at", "2024-05-07 19:11:15.050556"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+[36m  Disk Storage (0.3ms) [0m[32mUploaded file to key: hybwr1n8xv8jazn1nopickci9vso (checksum: KiOGO0Y900PwTnbjb0Kb+Q==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 311a3f10-dfe1-4924-9e46-1765703053ee) to Async(default) with arguments: #<GlobalID:0x0000731d472640d0 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/12>>
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: hybwr1n8xv8jazn1nopickci9vso (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjE2OjE1LjA1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ce40450c32a3eaa6b4a2daca221d7474d84ecd4a/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjE2OjE1LjA1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ce40450c32a3eaa6b4a2daca221d7474d84ecd4a/jantar_.jpg
+Completed 302 Found in 98ms (ActiveRecord: 5.9ms | Allocations: 28579)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA3VDE5OjE2OjE1LjA1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ce40450c32a3eaa6b4a2daca221d7474d84ecd4a/jantar_.jpg" for 127.0.0.1 at 2024-05-07 16:11:15 -0300
+[ActiveJob] [ActiveStorage::AnalyzeJob] [311a3f10-dfe1-4924-9e46-1765703053ee]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [311a3f10-dfe1-4924-9e46-1765703053ee] Performing ActiveStorage::AnalyzeJob (Job ID: 311a3f10-dfe1-4924-9e46-1765703053ee) from Async(default) enqueued at 2024-05-07T19:11:15.055700572Z with arguments: #<GlobalID:0x0000731d4716f530 @uri=#<URI::GID gid://livraria/ActiveStorage::Blob/12>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [311a3f10-dfe1-4924-9e46-1765703053ee] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: hybwr1n8xv8jazn1nopickci9vso[0m
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [311a3f10-dfe1-4924-9e46-1765703053ee]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 1461)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [311a3f10-dfe1-4924-9e46-1765703053ee]   [1m[36mActiveStorage::Blob Update (2.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":75,\"height\":100,\"analyzed\":true}"], ["id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [311a3f10-dfe1-4924-9e46-1765703053ee]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [311a3f10-dfe1-4924-9e46-1765703053ee]   [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = $1[0m  [["id", 9]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [311a3f10-dfe1-4924-9e46-1765703053ee]   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [311a3f10-dfe1-4924-9e46-1765703053ee] Performed ActiveStorage::AnalyzeJob (Job ID: 311a3f10-dfe1-4924-9e46-1765703053ee) from Async(default) in 19.09ms
+Started GET "/authors" for 127.0.0.1 at 2024-05-07 16:11:16 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3387)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4048)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 4420)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:11:18 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 3774)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4458)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.9ms | Allocations: 4790)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-07 16:11:21 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3260)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3893)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 4223)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-07 16:11:25 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3730)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4414)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.6ms | Allocations: 4744)
+
+
