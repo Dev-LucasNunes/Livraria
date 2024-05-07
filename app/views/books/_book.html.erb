@@ -1,37 +1,34 @@
-<div id="<%= dom_id book %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
-    <%= book.title %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Author:</strong>
-    <%= book.author.name %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Genre:</strong>
-    <%= book.genre %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Publication date:</strong>
-    <%= book.publication_date %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">ISBN:</strong>
-    <%= book.isbn %>
-  </p>
-
-  <td class="my-5">
-    <strong class="block font-medium mb-1">Capa:</strong>
+<div class="flex items-center px-16 py-16">
+  <div id="<%= dom_id book %>">
+    <p class="my-5">
+      <strong class="block text-2xl mb-1">Título: <%= book.title %></strong>
+    </p>
+    <hr>
+    <p class="my-5">
+      <strong class="block text-2xl font-medium mb-1">Autor: <%= book.author.name %></strong>
+    </p>
+    <hr>
+    <p class="my-5">
+      <strong class="block text-2xl font-medium mb-1">Gênero: <%= book.genre %></strong>
+    </p>
+    <hr>
+    <p class="my-5">
+      <strong class="block text-2xl font-medium mb-1">Data de publicação: <%= book.publication_date %></strong>
+    </p>
+    <hr>
+    <p class="my-5">
+      <strong class="block  text-2xl font-medium mb-1">ISBN: <%= book.isbn %></strong>
+    </p>
+    </div>
+  <div class="my-5 ml-6 border">
+    <strong class="block font-medium mb-1"></strong>
     <% if book.photo.present? && book.photo.attached? %>
-      <%= image_tag book.photo.variant(resize_to_fill: [75, 100]) %>
+      <%= image_tag book.photo.variant(resize_to_fill: [150, 200]) %>
     <% else %>
       Sem imagem
     <% end %>
-  </td>
+</div>
+
 
   <% if action_name != "show" %>
     <%= link_to "Mostrar livro", book, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
