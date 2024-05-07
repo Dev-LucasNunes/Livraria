@@ -1,31 +1,25 @@
-<div id="<%= dom_id author %>" class="bg-gray-800 shadow-md rounded-lg border-2 border-gray-300 flex flex-col justify-center">
-  <h2 class="text-5xl font-extrabold mb-4 bg-gray-700 text-center text-white">Autor:</h2>
-  <div class="flex items-center justify-center mb-2">
-    <strong class="text-4xl mr-2 text-white">Nome:</strong>
-    <span class="text-3xl font-semibold text-gray-200"><%= author.name %></span>
-  </div>
+<div class="flex justify-center items-center ">
+  <div id="<%= dom_id author %>">
+    <p class="my-5 ">
+      <strong class="block text-white text-2xl ">Nome: <%= author.name %></strong>
+    </p>
+    <hr class="mb-2">
 
-  <div class="flex items-center mb-2 justify-center">
-    <strong class="text-2xl mr-2 text-white">Nacionalidade:</strong>
-    <span class="text-2xl text-gray-200"><%= author.nationality %></span>
-  </div>
+    <p class="my-5">
+      <strong class="block text-white text-2xl mb-1">Nacionalidade: <%= author.nationality %></strong>
+    </p>
+    <hr class="mb-2">
 
-  <div class="flex items-center mb-2 justify-center">
-    <strong class="mr-2 text-2xl text-white">CPF:</strong>
-    <% cpf_object = CPF.new(author.cpf) %>
-    <span class="text-2xl text-gray-200"><%= cpf_object.formatted %></span>
-  </div>
+    <p class="my-5">
+      <strong class="block text-white  text-2xl mb-1"> CPF: <% cpf_object = CPF.new(author.cpf) %> <span class="text-2xl "><%= cpf_object.formatted %></span></strong>
+    </p>
+    <hr class="mb-2">
 
-  <div class="flex items-center mb-2 justify-center">
-    <strong class="text-2xl mr-2 text-white">Data de Nascimento:</strong>
-    <span class="text-2xl text-gray-200"><%= author.date_of_birth.strftime("%d/%m/%Y") if author.date_of_birth.present? %></span>
-  </div>
-  <div class="flex justify-center mt-2 mb-2">
-    <%= link_to edit_author_path(author) do %>
-      <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
-        Editar
-      </button>
-    <% end %>
-    <%= button_to "Excluir", author, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+    <p class="my-5">
+      <strong class="block text-white  text-2xl mb-1">Data de nascimento: <%= author.date_of_birth.strftime("%d/%m/%Y") if author.date_of_birth.present? %></strong>
+    </p>
+    <hr class="mb-2">
   </div>
 </div>
+
+
