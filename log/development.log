@@ -31204,3 +31204,2549 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.6ms | Allocations: 4744)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateSuppliers (20240508162627)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.8ms)[0m  [1m[35mCREATE TABLE "suppliers" ("id" bigserial primary key, "name" character varying, "address" character varying, "contact" character varying, "account_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b2568e91c4"
+FOREIGN KEY ("account_id")
+  REFERENCES "accounts" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateSuppliers (20240508162627)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "suppliers" ("id" bigserial primary key, "name" character varying, "address" character varying, "contact" character varying, "account_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b2568e91c4"
+FOREIGN KEY ("account_id")
+  REFERENCES "accounts" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateAccounts (20240508163017)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "accounts" ("id" bigserial primary key, "number" character varying, "type" character varying, "supplier_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_530e87101a"
+FOREIGN KEY ("supplier_id")
+  REFERENCES "suppliers" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateAccounts (20240508163722)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "accounts" ("id" bigserial primary key, "number" character varying, "type" character varying, "supplier_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_530e87101a"
+FOREIGN KEY ("supplier_id")
+  REFERENCES "suppliers" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateSuppliers (20240508164356)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "suppliers" ("id" bigserial primary key, "name" character varying, "address" character varying, "contact" character varying, "account" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240508164356') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateAccounts (20240508165403)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "accounts" ("id" bigserial primary key, "number" character varying, "type" character varying, "supplier_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_530e87101a"
+FOREIGN KEY ("supplier_id")
+  REFERENCES "suppliers" ("id")
+)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_accounts_on_supplier_id" ON "accounts" ("supplier_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240508165403') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAccounts (20240508165403)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mDROP TABLE "accounts"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240508165403'[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSuppliers (20240508164356)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE "suppliers"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240508164356'[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-05-08 16:21:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240508192126_create_suppliers.rb
+
+
+):
+  
+activerecord (7.1.3.2) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateSuppliers (20240508192126)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE "suppliers" ("id" bigserial primary key, "name" character varying, "address" character varying, "contact" character varying, "account" character varying, "account_digit" smallint, "account_type" character varying, "bank" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240508192126') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-05-08 16:22:04 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 212)
+  Rendered layout layouts/application.html.erb (Duration: 98.6ms | Allocations: 38002)
+Completed 200 OK in 107ms (Views: 101.0ms | ActiveRecord: 0.0ms | Allocations: 41167)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 16:22:08 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.6ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 27)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 6839)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 7541)
+Completed 200 OK in 37ms (Views: 14.2ms | ActiveRecord: 3.0ms | Allocations: 19543)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:22:09 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 8.6ms | Allocations: 4167)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4513)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5190)
+Completed 200 OK in 116ms (Views: 11.4ms | ActiveRecord: 4.1ms | Allocations: 140988)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:25:43 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 5.9ms | Allocations: 6119)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 6424)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 6503)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.1ms | Allocations: 13034)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x00000000011a80>):
+    32:   </div>
+    33: 
+    34:   <div class="field">
+    35:     <%= f.label :account_digit, "Digito Verificador" %><br/>
+    36:     <%= f.number_field :account_digit, :maxlength => 1, :size => 1 %>
+    37:   </div>
+    38: 
+  
+app/views/suppliers/_form.html.erb:35
+app/views/suppliers/_form.html.erb:1
+app/views/suppliers/new.html.erb:4
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:26:09 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2496)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2829)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10833)
+Completed 200 OK in 19ms (Views: 8.2ms | ActiveRecord: 3.2ms | Allocations: 17359)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to ChangeAccountDigitToStringInSuppliers (20240508192825)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.2ms)[0m  [1m[35mALTER TABLE "suppliers" ALTER COLUMN "account_digit" TYPE character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240508192825') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:29:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2489)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2822)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 10779)
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 2.9ms | Allocations: 17245)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:29:56 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2579)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2912)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 10917)
+Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 1.7ms | Allocations: 17385)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:31:52 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2582)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2919)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 10876)
+Completed 200 OK in 17ms (Views: 7.8ms | ActiveRecord: 3.8ms | Allocations: 17367)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:36:21 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2577)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2910)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 10914)
+Completed 200 OK in 16ms (Views: 8.1ms | ActiveRecord: 3.3ms | Allocations: 17383)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:37:10 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.7ms | Allocations: 2578)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2911)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 10868)
+Completed 200 OK in 17ms (Views: 9.6ms | ActiveRecord: 2.1ms | Allocations: 17334)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:37:19 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.1ms | Allocations: 2573)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2908)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 10913)
+Completed 200 OK in 22ms (Views: 11.4ms | ActiveRecord: 4.1ms | Allocations: 17404)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:38:58 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2570)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2903)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 10861)
+Completed 200 OK in 21ms (Views: 11.0ms | ActiveRecord: 3.9ms | Allocations: 17333)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:39:08 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.5ms | Allocations: 2568)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2901)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 10905)
+Completed 200 OK in 24ms (Views: 12.8ms | ActiveRecord: 3.3ms | Allocations: 17373)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:39:21 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.6ms | Allocations: 2578)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2911)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 10868)
+Completed 200 OK in 25ms (Views: 13.5ms | ActiveRecord: 3.3ms | Allocations: 17334)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:39:26 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.8ms | Allocations: 2567)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2904)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 10909)
+Completed 200 OK in 24ms (Views: 12.8ms | ActiveRecord: 3.3ms | Allocations: 17438)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:39:28 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 1641)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1721)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2353)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2715)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:39:47 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.8ms | Allocations: 2580)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2913)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 10871)
+Completed 200 OK in 20ms (Views: 10.2ms | ActiveRecord: 3.7ms | Allocations: 17343)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:39:58 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2572)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2905)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 10909)
+Completed 200 OK in 21ms (Views: 10.1ms | ActiveRecord: 3.5ms | Allocations: 17377)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:40:07 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.4ms | Allocations: 2583)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2920)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 10943)
+Completed 200 OK in 21ms (Views: 10.9ms | ActiveRecord: 3.7ms | Allocations: 17472)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:40:20 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2564)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2897)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 10856)
+Completed 200 OK in 21ms (Views: 10.4ms | ActiveRecord: 3.7ms | Allocations: 17326)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:40:41 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.8ms | Allocations: 2576)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2909)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 10913)
+Completed 200 OK in 25ms (Views: 13.4ms | ActiveRecord: 3.2ms | Allocations: 17381)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:40:56 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.2ms | Allocations: 2579)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2916)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 10921)
+Completed 200 OK in 22ms (Views: 11.1ms | ActiveRecord: 3.7ms | Allocations: 17450)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:41:22 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.5ms | Allocations: 2575)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2908)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 10867)
+Completed 200 OK in 24ms (Views: 12.8ms | ActiveRecord: 3.4ms | Allocations: 17337)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:41:30 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2567)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2902)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10907)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 3.3ms | Allocations: 17403)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:41:45 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.8ms | Allocations: 2578)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2911)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 10916)
+Completed 200 OK in 24ms (Views: 12.8ms | ActiveRecord: 3.4ms | Allocations: 17391)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:42:47 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2568)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2901)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 10858)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 2.1ms | Allocations: 17325)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:43:04 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.1ms | Allocations: 2562)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2895)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 10853)
+Completed 200 OK in 26ms (Views: 16.5ms | ActiveRecord: 3.0ms | Allocations: 17323)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:43:13 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2566)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2903)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 10908)
+Completed 200 OK in 21ms (Views: 10.3ms | ActiveRecord: 3.8ms | Allocations: 17437)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 16:44:25 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2575)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2908)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 10912)
+Completed 200 OK in 15ms (Views: 7.4ms | ActiveRecord: 2.1ms | Allocations: 17383)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:02:43 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.5ms | Allocations: 2572)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2905)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 10880)
+Completed 200 OK in 26ms (Views: 14.4ms | ActiveRecord: 2.2ms | Allocations: 19898)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:03:54 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.5ms | Allocations: 2547)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2885)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 10890)
+Completed 200 OK in 23ms (Views: 11.5ms | ActiveRecord: 4.5ms | Allocations: 17442)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:04:00 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.8ms | Allocations: 2551)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2885)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 10860)
+Completed 200 OK in 21ms (Views: 10.6ms | ActiveRecord: 3.4ms | Allocations: 17331)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:04:06 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.0ms | Allocations: 2566)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2902)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 10907)
+Completed 200 OK in 22ms (Views: 11.2ms | ActiveRecord: 3.9ms | Allocations: 17398)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:05:19 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 1647)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1727)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2359)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2721)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:05:27 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2555)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2889)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 10894)
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 2.7ms | Allocations: 17366)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:06:43 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 13.6ms | Allocations: 2559)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 2892)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 10896)
+Completed 200 OK in 53ms (Views: 44.0ms | ActiveRecord: 2.0ms | Allocations: 17367)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:07:07 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2552)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2889)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 10895)
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 3.4ms | Allocations: 17428)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:07:18 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.4ms | Allocations: 2557)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2890)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 10908)
+Completed 200 OK in 22ms (Views: 10.8ms | ActiveRecord: 3.4ms | Allocations: 17380)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:07:34 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2541)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2874)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 10841)
+Completed 200 OK in 22ms (Views: 10.6ms | ActiveRecord: 3.7ms | Allocations: 17307)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:08:41 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2550)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2888)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 10893)
+Completed 200 OK in 15ms (Views: 7.9ms | ActiveRecord: 2.0ms | Allocations: 17422)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:09:01 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2549)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2883)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 10888)
+Completed 200 OK in 17ms (Views: 7.8ms | ActiveRecord: 3.3ms | Allocations: 17360)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:10:02 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2562)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2898)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10903)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 3.3ms | Allocations: 17394)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:11:02 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2551)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2885)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 10890)
+Completed 200 OK in 16ms (Views: 7.5ms | ActiveRecord: 2.2ms | Allocations: 17362)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:12:02 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2559)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2893)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 10898)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 2.1ms | Allocations: 17370)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-08 17:12:23 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 211)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 8512)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 9824)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:12:49 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.1ms | Allocations: 2557)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2891)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 10896)
+Completed 200 OK in 22ms (Views: 11.9ms | ActiveRecord: 3.3ms | Allocations: 17425)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:13:57 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2556)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2892)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 10897)
+Completed 200 OK in 17ms (Views: 8.5ms | ActiveRecord: 3.5ms | Allocations: 17393)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:16:01 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.1ms | Allocations: 2557)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2891)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 10896)
+Completed 200 OK in 22ms (Views: 10.9ms | ActiveRecord: 3.4ms | Allocations: 17370)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:16:08 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.2ms | Allocations: 2559)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2893)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 10898)
+Completed 200 OK in 21ms (Views: 11.2ms | ActiveRecord: 3.6ms | Allocations: 17370)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:17:13 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.1ms | Allocations: 2574)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2912)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 10917)
+Completed 200 OK in 23ms (Views: 11.6ms | ActiveRecord: 3.5ms | Allocations: 17451)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-08 17:17:22 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1151)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1695)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:18:15 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2589)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2922)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 10927)
+Completed 200 OK in 15ms (Views: 7.9ms | ActiveRecord: 2.0ms | Allocations: 17401)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:18:49 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.6ms | Allocations: 2579)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2914)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 10919)
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 1.9ms | Allocations: 17415)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:19:17 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2592)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2925)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 10930)
+Completed 200 OK in 16ms (Views: 7.4ms | ActiveRecord: 2.7ms | Allocations: 17403)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:20:03 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2581)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2915)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 10920)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 2.6ms | Allocations: 17394)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:20:14 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.0ms | Allocations: 2577)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2911)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 10868)
+Completed 200 OK in 21ms (Views: 10.6ms | ActiveRecord: 3.7ms | Allocations: 17334)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:20:28 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2581)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2915)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 10872)
+Completed 200 OK in 15ms (Views: 7.0ms | ActiveRecord: 3.3ms | Allocations: 17338)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:21:01 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2574)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2907)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 10864)
+Completed 200 OK in 15ms (Views: 7.9ms | ActiveRecord: 1.9ms | Allocations: 17330)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:21:30 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.4ms | Allocations: 2575)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2910)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10916)
+Completed 200 OK in 21ms (Views: 14.8ms | ActiveRecord: 1.9ms | Allocations: 17384)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:21:55 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2579)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2912)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 10917)
+Completed 200 OK in 22ms (Views: 11.4ms | ActiveRecord: 3.0ms | Allocations: 17448)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:22:19 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.2ms | Allocations: 2612)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2945)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 10950)
+Completed 200 OK in 21ms (Views: 11.6ms | ActiveRecord: 2.0ms | Allocations: 17422)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:22:21 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 1.7ms | Allocations: 1647)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1727)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2359)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 2721)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:23:16 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2586)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2919)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 10923)
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 1.9ms | Allocations: 17393)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:23:25 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.4ms | Allocations: 2579)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2912)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 10869)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 2.8ms | Allocations: 17335)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:23:44 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.5ms | Allocations: 2591)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2924)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 10881)
+Completed 200 OK in 16ms (Views: 7.9ms | ActiveRecord: 3.4ms | Allocations: 17347)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:23:54 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2578)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2915)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 10920)
+Completed 200 OK in 18ms (Views: 8.2ms | ActiveRecord: 2.1ms | Allocations: 17412)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:24:07 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.0ms | Allocations: 2583)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2916)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 10921)
+Completed 200 OK in 20ms (Views: 10.5ms | ActiveRecord: 2.9ms | Allocations: 17394)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:24:20 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2571)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2904)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 10909)
+Completed 200 OK in 16ms (Views: 8.7ms | ActiveRecord: 2.0ms | Allocations: 17381)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:25:22 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.0ms | Allocations: 2569)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2902)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 10906)
+Completed 200 OK in 20ms (Views: 11.0ms | ActiveRecord: 2.0ms | Allocations: 17376)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:26:11 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2584)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2917)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 10874)
+Completed 200 OK in 14ms (Views: 7.2ms | ActiveRecord: 1.9ms | Allocations: 17340)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:26:25 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2591)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2924)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 10897)
+Completed 200 OK in 24ms (Views: 15.0ms | ActiveRecord: 3.4ms | Allocations: 17364)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:26:35 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.1ms | Allocations: 2578)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2915)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 10920)
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 3.5ms | Allocations: 17450)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:27:34 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.5ms | Allocations: 2582)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2915)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 10920)
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 2.2ms | Allocations: 17393)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:27:48 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2574)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2907)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 10911)
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 3.7ms | Allocations: 17382)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:28:29 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2580)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2913)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 10886)
+Completed 200 OK in 17ms (Views: 9.8ms | ActiveRecord: 2.0ms | Allocations: 17356)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:28:34 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 10.4ms | Allocations: 2575)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2908)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 10915)
+Completed 200 OK in 28ms (Views: 19.2ms | ActiveRecord: 2.1ms | Allocations: 17382)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:29:10 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2560)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2893)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 10898)
+Completed 200 OK in 16ms (Views: 8.4ms | ActiveRecord: 1.9ms | Allocations: 17428)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:30:09 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2579)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2912)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 10917)
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 3.4ms | Allocations: 17389)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:30:32 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2587)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2920)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 10924)
+Completed 200 OK in 16ms (Views: 7.9ms | ActiveRecord: 3.3ms | Allocations: 17395)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:30:58 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2577)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2910)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 10883)
+Completed 200 OK in 16ms (Views: 7.3ms | ActiveRecord: 3.8ms | Allocations: 17353)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:31:06 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.7ms | Allocations: 2576)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2913)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 10918)
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 3.3ms | Allocations: 17410)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:31:17 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.0ms | Allocations: 2573)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2906)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 10911)
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 2.0ms | Allocations: 17384)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:31:32 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.7ms | Allocations: 2583)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2916)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 10921)
+Completed 200 OK in 16ms (Views: 8.5ms | ActiveRecord: 3.3ms | Allocations: 17393)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:31:50 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.0ms | Allocations: 2576)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2909)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 10913)
+Completed 200 OK in 20ms (Views: 10.4ms | ActiveRecord: 3.1ms | Allocations: 17384)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:31:58 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.5ms | Allocations: 2591)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2926)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 10931)
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 1.9ms | Allocations: 17423)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:32:12 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.5ms | Allocations: 2583)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2916)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 10921)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 2.0ms | Allocations: 17394)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:32:27 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2577)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2910)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 10915)
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 1.9ms | Allocations: 17388)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:32:55 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2588)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2921)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 10943)
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 1.9ms | Allocations: 17415)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:33:26 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.0ms | Allocations: 2573)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2911)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 10916)
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 1.9ms | Allocations: 17446)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:33:53 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2587)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2920)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 10925)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 1.9ms | Allocations: 17398)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:34:31 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2578)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2912)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 10917)
+Completed 200 OK in 15ms (Views: 7.5ms | ActiveRecord: 2.0ms | Allocations: 17390)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 17:34:43 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.5ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 16)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1290)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1935)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 2422)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:35:23 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2589)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2922)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 10927)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 2.0ms | Allocations: 17399)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:35:33 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2589)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2926)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 10931)
+Completed 200 OK in 20ms (Views: 10.9ms | ActiveRecord: 2.0ms | Allocations: 17461)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:35:42 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.8ms | Allocations: 2586)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2919)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 10924)
+Completed 200 OK in 19ms (Views: 10.2ms | ActiveRecord: 2.1ms | Allocations: 17397)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:35:51 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2580)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2913)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 10918)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 2.0ms | Allocations: 17391)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:35:58 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.5ms | Allocations: 2582)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2917)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 10922)
+Completed 200 OK in 17ms (Views: 8.6ms | ActiveRecord: 3.3ms | Allocations: 17418)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:36:09 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.8ms | Allocations: 2576)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2909)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 10914)
+Completed 200 OK in 20ms (Views: 11.2ms | ActiveRecord: 1.9ms | Allocations: 17391)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:36:15 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.5ms | Allocations: 2585)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2918)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 10875)
+Completed 200 OK in 22ms (Views: 11.5ms | ActiveRecord: 3.7ms | Allocations: 17346)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:36:47 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2603)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2936)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10941)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 1.9ms | Allocations: 17414)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:37:02 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.2ms | Allocations: 2589)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2922)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 10927)
+Completed 200 OK in 21ms (Views: 11.4ms | ActiveRecord: 2.8ms | Allocations: 17400)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:37:12 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.7ms | Allocations: 2586)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2923)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 10928)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 3.3ms | Allocations: 17462)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:37:30 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2586)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2919)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 10924)
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 3.4ms | Allocations: 17401)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:37:48 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2594)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2927)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10884)
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 2.5ms | Allocations: 17355)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:38:02 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2584)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2917)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 10922)
+Completed 200 OK in 17ms (Views: 7.6ms | ActiveRecord: 3.4ms | Allocations: 17395)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:38:09 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2588)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2921)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 10926)
+Completed 200 OK in 16ms (Views: 7.6ms | ActiveRecord: 3.3ms | Allocations: 17399)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:38:25 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2591)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2928)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 10933)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 1.9ms | Allocations: 17467)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:38:50 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2579)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2913)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 10918)
+Completed 200 OK in 15ms (Views: 7.5ms | ActiveRecord: 1.9ms | Allocations: 17395)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:40:34 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2594)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2927)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 10884)
+Completed 200 OK in 16ms (Views: 8.7ms | ActiveRecord: 1.9ms | Allocations: 17355)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:40:54 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2578)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2911)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 10916)
+Completed 200 OK in 16ms (Views: 7.5ms | ActiveRecord: 3.5ms | Allocations: 17389)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:41:02 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.1ms | Allocations: 2577)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2912)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 10917)
+Completed 200 OK in 21ms (Views: 11.2ms | ActiveRecord: 1.9ms | Allocations: 17413)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:41:07 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2592)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2925)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 10930)
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 3.4ms | Allocations: 17403)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:41:27 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2580)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2913)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10918)
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 3.4ms | Allocations: 17395)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:41:38 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2584)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2917)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 10874)
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 3.3ms | Allocations: 17345)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:42:02 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2595)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2932)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 10937)
+Completed 200 OK in 17ms (Views: 8.3ms | ActiveRecord: 3.3ms | Allocations: 17449)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:42:24 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2570)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2903)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 10908)
+Completed 200 OK in 16ms (Views: 7.4ms | ActiveRecord: 3.4ms | Allocations: 17381)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-08 17:43:45 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 43750)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 44420)
+Completed 200 OK in 39ms (Views: 29.1ms | ActiveRecord: 4.0ms | Allocations: 47485)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-05-08 17:43:47 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 4.0ms | Allocations: 2210)
+  Rendered authors/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2529)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3204)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 3638)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 17:43:54 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (2.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (2.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 110.1ms | Allocations: 223800)
+  Rendered layout layouts/application.html.erb (Duration: 111.0ms | Allocations: 224538)
+Completed 200 OK in 131ms (Views: 96.0ms | ActiveRecord: 15.7ms | Allocations: 241011)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-08 17:43:55 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3180)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3814)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 4188)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 17:43:56 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3853)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4537)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.7ms | Allocations: 4868)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-08 17:43:56 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (1.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 10], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: hybwr1n8xv8jazn1nopickci9vso (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA4VDIwOjQ4OjU2LjYxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f19142ca491ea714d89bf7b2ae9c0574742293cb/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA4VDIwOjQ4OjU2LjYxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f19142ca491ea714d89bf7b2ae9c0574742293cb/jantar_.jpg
+Completed 302 Found in 33ms (ActiveRecord: 3.6ms | Allocations: 29338)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA4VDIwOjQ4OjU2LjYxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f19142ca491ea714d89bf7b2ae9c0574742293cb/jantar_.jpg" for 127.0.0.1 at 2024-05-08 17:43:56 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 365)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-08 17:43:57 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 5.8ms | Allocations: 4134)
+  Rendered books/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4492)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5169)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.4ms | Allocations: 5671)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-08 17:44:01 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 3126)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3760)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 4132)
+
+
+Started GET "/authors/81/edit" for 127.0.0.1 at 2024-05-08 17:44:03 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 2.1ms | Allocations: 1172)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1503)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2131)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 3745)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-08 17:44:10 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3030)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3662)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 3992)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-08 17:44:19 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1145)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1689)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-05-08 17:45:27 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 2.1ms | Allocations: 1888)
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2224)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10228)
+Completed 200 OK in 15ms (Views: 8.1ms | ActiveRecord: 1.9ms | Allocations: 17120)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 17:45:28 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 24.1ms | Allocations: 25367)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 26105)
+Completed 200 OK in 35ms (Views: 20.0ms | ActiveRecord: 5.2ms | Allocations: 39239)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-08 17:45:28 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 6.0ms | Allocations: 3103)
+  Rendered books/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3432)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4066)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 4541)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 17:46:10 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 16)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1419)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 9453)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 11625)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:46:11 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.6ms | Allocations: 2278)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2571)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3203)
+Completed 200 OK in 17ms (Views: 5.9ms | ActiveRecord: 3.2ms | Allocations: 7969)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:46:30 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.5ms | Allocations: 2416)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2749)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 10753)
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 3.4ms | Allocations: 17226)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:47:31 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 1.9ms | Allocations: 2414)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2747)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 10705)
+Completed 200 OK in 14ms (Views: 6.8ms | ActiveRecord: 2.1ms | Allocations: 17172)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:47:46 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.0ms | Allocations: 2420)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2753)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 10710)
+Completed 200 OK in 21ms (Views: 10.8ms | ActiveRecord: 3.5ms | Allocations: 17176)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:47:59 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2414)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2747)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 10704)
+Completed 200 OK in 16ms (Views: 7.7ms | ActiveRecord: 3.9ms | Allocations: 17170)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:48:42 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2420)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2753)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 10710)
+Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 1.9ms | Allocations: 17176)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:49:11 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2425)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2758)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 10731)
+Completed 200 OK in 21ms (Views: 14.8ms | ActiveRecord: 1.9ms | Allocations: 17198)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:49:28 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2423)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2760)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10765)
+Completed 200 OK in 15ms (Views: 8.1ms | ActiveRecord: 1.9ms | Allocations: 17295)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:49:47 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2427)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2760)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 10733)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 3.3ms | Allocations: 17204)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:50:08 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2423)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2756)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 10713)
+Completed 200 OK in 17ms (Views: 7.8ms | ActiveRecord: 3.6ms | Allocations: 17180)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:50:17 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 1.9ms | Allocations: 2417)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2750)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 10707)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 3.3ms | Allocations: 17173)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:50:24 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2414)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2748)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 10705)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 2.2ms | Allocations: 17171)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:51:25 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.4ms | Allocations: 2471)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2753)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 10710)
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 2.0ms | Allocations: 17176)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:51:40 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.7ms | Allocations: 2470)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2754)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 10759)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 2.0ms | Allocations: 17252)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:51:48 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.1ms | Allocations: 2459)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2741)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 10746)
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 2.0ms | Allocations: 17219)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:52:03 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.0ms | Allocations: 2466)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2747)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 10721)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 2.0ms | Allocations: 17193)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-08 17:52:16 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 7139)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 7809)
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 3.1ms | Allocations: 10368)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-05-08 17:52:17 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 1.6ms | Allocations: 1676)
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2604)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 3014)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 17:52:24 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 29.3ms | Allocations: 25314)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 26052)
+Completed 200 OK in 42ms (Views: 21.1ms | ActiveRecord: 9.4ms | Allocations: 39190)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-08 17:52:25 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 10], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: hybwr1n8xv8jazn1nopickci9vso (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA4VDIwOjU3OjI1LjA5NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ffd91db431f7a693abace43f83c0ea74c3ed4b70/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA4VDIwOjU3OjI1LjA5NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ffd91db431f7a693abace43f83c0ea74c3ed4b70/jantar_.jpg
+Completed 302 Found in 22ms (ActiveRecord: 2.7ms | Allocations: 14268)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA4VDIwOjU3OjI1LjA5NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ffd91db431f7a693abace43f83c0ea74c3ed4b70/jantar_.jpg" for 127.0.0.1 at 2024-05-08 17:52:25 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-08 17:52:27 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 4.5ms | Allocations: 3077)
+  Rendered books/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3409)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4068)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 4553)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 17:52:29 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3888)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4572)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.7ms | Allocations: 4903)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 17:52:29 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 16)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1150)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1795)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 2254)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:52:30 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.4ms | Allocations: 1508)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1565)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2197)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 2535)
+
+
+Started POST "/suppliers" for 127.0.0.1 at 2024-05-08 17:53:04 -0300
+Processing by SuppliersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "supplier"=>{"name"=>"Lucas", "address"=>"Cantagalo", "contact"=>"11943195830", "account"=>"888272", "account_digit"=>"3", "account_type"=>"c/c", "bank"=>"inter"}, "commit"=>"Create Supplier"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+  [1m[36mSupplier Create (2.0ms)[0m  [1m[32mINSERT INTO "suppliers" ("name", "address", "contact", "account", "account_digit", "account_type", "bank", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Lucas"], ["address", "Cantagalo"], ["contact", "11943195830"], ["account", "888272"], ["account_digit", "3"], ["account_type", "c/c"], ["bank", "inter"], ["created_at", "2024-05-08 20:53:04.266591"], ["updated_at", "2024-05-08 20:53:04.266591"]]
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/suppliers/1
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms | Allocations: 3915)
+
+
+Started GET "/suppliers/1" for 127.0.0.1 at 2024-05-08 17:53:04 -0300
+Processing by SuppliersController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:63:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/_supplier.html.erb (Duration: 0.5ms | Allocations: 522)
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1818)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2481)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 4259)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 17:53:07 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of suppliers/_supplier.html.erb [1 times] (Duration: 1.2ms | Allocations: 538)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1648)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2296)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 2660)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:53:18 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.4ms | Allocations: 1568)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1626)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2258)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 2599)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:53:20 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.4ms | Allocations: 1490)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1547)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2179)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 2516)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 17:59:29 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.3ms | Allocations: 2954)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3244)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 11245)
+Completed 200 OK in 20ms (Views: 8.5ms | ActiveRecord: 2.2ms | Allocations: 20266)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:03:25 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2552)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2835)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 10838)
+Completed 200 OK in 20ms (Views: 8.2ms | ActiveRecord: 5.5ms | Allocations: 17353)
+
+
+Started POST "/suppliers" for 127.0.0.1 at 2024-05-08 18:03:30 -0300
+Processing by SuppliersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "supplier"=>{"name"=>"", "address"=>"", "contact"=>"", "account"=>"", "account_digit"=>"", "account_type"=>"cc", "bank"=>""}, "commit"=>"Create Supplier"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+  [1m[36mSupplier Create (1.8ms)[0m  [1m[32mINSERT INTO "suppliers" ("name", "address", "contact", "account", "account_digit", "account_type", "bank", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["address", ""], ["contact", ""], ["account", ""], ["account_digit", ""], ["account_type", "cc"], ["bank", ""], ["created_at", "2024-05-08 21:03:30.199102"], ["updated_at", "2024-05-08 21:03:30.199102"]]
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/suppliers/2
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms | Allocations: 2750)
+
+
+Started GET "/suppliers/2" for 127.0.0.1 at 2024-05-08 18:03:30 -0300
+Processing by SuppliersController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:63:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/_supplier.html.erb (Duration: 0.8ms | Allocations: 453)
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1387)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2015)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 3871)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-08 18:05:15 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 7367)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 15371)
+Completed 200 OK in 17ms (Views: 11.2ms | ActiveRecord: 3.7ms | Allocations: 18952)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 18:05:16 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 42.3ms | Allocations: 25364)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 26102)
+Completed 200 OK in 58ms (Views: 34.6ms | ActiveRecord: 9.6ms | Allocations: 39216)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 18:05:16 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of suppliers/_supplier.html.erb [2 times] (Duration: 1.2ms | Allocations: 660)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 6485)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 7182)
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 3.1ms | Allocations: 8324)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:05:17 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2374)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2620)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3252)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 3663)
+
+
+Started POST "/suppliers" for 127.0.0.1 at 2024-05-08 18:05:24 -0300
+Processing by SuppliersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "supplier"=>{"name"=>"", "address"=>"", "contact"=>"", "account"=>"", "account_digit"=>"", "account_type"=>"poupanca", "bank"=>""}, "commit"=>"Create Supplier"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+  [1m[36mSupplier Create (1.6ms)[0m  [1m[32mINSERT INTO "suppliers" ("name", "address", "contact", "account", "account_digit", "account_type", "bank", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["address", ""], ["contact", ""], ["account", ""], ["account_digit", ""], ["account_type", "poupanca"], ["bank", ""], ["created_at", "2024-05-08 21:05:24.991706"], ["updated_at", "2024-05-08 21:05:24.991706"]]
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/suppliers/3
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms | Allocations: 2645)
+
+
+Started GET "/suppliers/3" for 127.0.0.1 at 2024-05-08 18:05:25 -0300
+Processing by SuppliersController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:63:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/_supplier.html.erb (Duration: 0.7ms | Allocations: 437)
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1292)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1920)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3583)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 18:05:52 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 33.5ms | Allocations: 30517)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 38582)
+Completed 200 OK in 48ms (Views: 27.4ms | ActiveRecord: 12.0ms | Allocations: 52778)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 18:05:53 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3970)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4656)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.8ms | Allocations: 5026)
+
+
+Started GET "/suppliers/3" for 127.0.0.1 at 2024-05-08 18:05:54 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:63:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/_supplier.html.erb (Duration: 0.8ms | Allocations: 475)
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1527)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2237)
+Completed 200 OK in 16ms (Views: 4.3ms | ActiveRecord: 3.4ms | Allocations: 8981)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 18:05:54 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of suppliers/_supplier.html.erb [3 times] (Duration: 1.4ms | Allocations: 701)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1933)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2578)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 2995)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:06:40 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2358)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2603)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3235)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 3642)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:10:10 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.2ms | Allocations: 2548)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2829)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10784)
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 2.5ms | Allocations: 17250)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to AddCnpjToSuppliers (20240508211832)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "suppliers" ADD "cnpj" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240508211832') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(967796580926285565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:18:57 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.4ms | Allocations: 2567)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2852)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10855)
+Completed 200 OK in 21ms (Views: 8.3ms | ActiveRecord: 3.5ms | Allocations: 19879)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:19:49 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2805)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3086)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 11089)
+Completed 200 OK in 22ms (Views: 7.9ms | ActiveRecord: 5.6ms | Allocations: 30469)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:20:21 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.4ms | Allocations: 2770)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 3051)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 11007)
+Completed 200 OK in 16ms (Views: 8.4ms | ActiveRecord: 2.6ms | Allocations: 17829)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:20:33 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.7ms | Allocations: 2778)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3059)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 11062)
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 3.4ms | Allocations: 17887)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:21:05 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2785)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 3067)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 11022)
+Completed 200 OK in 17ms (Views: 9.4ms | ActiveRecord: 1.9ms | Allocations: 17842)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:21:29 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.5ms | Allocations: 2781)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3064)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 11067)
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 2.0ms | Allocations: 17951)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:21:51 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2787)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 3066)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 11069)
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 3.3ms | Allocations: 17894)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:23:19 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.4ms | Allocations: 2788)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 3066)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 11022)
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 2.0ms | Allocations: 17843)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:23:25 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2780)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 3058)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 11061)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 3.4ms | Allocations: 17886)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:23:40 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.2ms | Allocations: 2778)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3058)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 11061)
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 3.3ms | Allocations: 17907)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:24:00 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.7ms | Allocations: 2782)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3060)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 11063)
+Completed 200 OK in 18ms (Views: 8.8ms | ActiveRecord: 3.3ms | Allocations: 17890)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:24:04 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.9ms | Allocations: 2777)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 3055)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 11058)
+Completed 200 OK in 18ms (Views: 9.0ms | ActiveRecord: 3.3ms | Allocations: 17883)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:24:09 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.5ms | Allocations: 2782)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3060)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 11016)
+Completed 200 OK in 16ms (Views: 7.7ms | ActiveRecord: 3.4ms | Allocations: 17837)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:24:14 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.0ms | Allocations: 2789)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 3069)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 11072)
+Completed 200 OK in 24ms (Views: 8.9ms | ActiveRecord: 3.4ms | Allocations: 17898)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:24:26 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.2ms | Allocations: 2790)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3068)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 11071)
+Completed 200 OK in 17ms (Views: 8.8ms | ActiveRecord: 3.3ms | Allocations: 17955)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:24:32 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2794)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 3072)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 11075)
+Completed 200 OK in 17ms (Views: 8.3ms | ActiveRecord: 3.4ms | Allocations: 17902)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:24:40 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2786)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 3064)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 11067)
+Completed 200 OK in 16ms (Views: 7.5ms | ActiveRecord: 3.4ms | Allocations: 17892)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:24:52 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.5ms | Allocations: 2772)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3054)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 11066)
+Completed 200 OK in 24ms (Views: 8.8ms | ActiveRecord: 3.4ms | Allocations: 17889)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:25:40 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 2.3ms | Allocations: 2783)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 3061)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 11064)
+Completed 200 OK in 16ms (Views: 8.4ms | ActiveRecord: 1.9ms | Allocations: 17948)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:26:23 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.2ms | Allocations: 2781)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 3059)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 11062)
+Completed 200 OK in 20ms (Views: 9.4ms | ActiveRecord: 3.3ms | Allocations: 17889)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-08 18:26:29 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 7333)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 8003)
+Completed 200 OK in 19ms (Views: 12.8ms | ActiveRecord: 3.4ms | Allocations: 10562)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 18:26:30 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 35.9ms | Allocations: 25398)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 26136)
+Completed 200 OK in 50ms (Views: 27.7ms | ActiveRecord: 9.7ms | Allocations: 39350)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-08 18:26:30 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 10], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: hybwr1n8xv8jazn1nopickci9vso (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA4VDIxOjMxOjMwLjM4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6e3f4bf5ea06fa74f124b5ab4762370788e274f5/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA4VDIxOjMxOjMwLjM4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6e3f4bf5ea06fa74f124b5ab4762370788e274f5/jantar_.jpg
+Completed 302 Found in 24ms (ActiveRecord: 2.3ms | Allocations: 14269)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTA4VDIxOjMxOjMwLjM4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6e3f4bf5ea06fa74f124b5ab4762370788e274f5/jantar_.jpg" for 127.0.0.1 at 2024-05-08 18:26:30 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 18:26:31 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of suppliers/_supplier.html.erb [3 times] (Duration: 1.3ms | Allocations: 735)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2263)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2946)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 3489)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 18:26:31 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3881)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4565)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 4897)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-08 18:26:32 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3021)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3653)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 3984)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 18:26:32 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3729)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4413)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 1.0ms | Allocations: 4743)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 18:26:33 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of suppliers/_supplier.html.erb [3 times] (Duration: 0.6ms | Allocations: 278)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1238)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1883)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 2213)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-08 18:26:35 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3020)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3652)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 3982)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-08 18:26:35 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1155)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1699)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 18:26:36 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3977)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4661)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.6ms | Allocations: 4995)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2024-05-08 18:26:37 -0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 2.8ms | Allocations: 1670)
+  Rendered authors/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1969)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2601)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 3004)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-08 18:26:37 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3726)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4410)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.7ms | Allocations: 4740)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-08 18:26:38 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 5.0ms | Allocations: 2869)
+  Rendered books/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3161)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3793)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 4197)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 18:26:39 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of suppliers/_supplier.html.erb [3 times] (Duration: 0.5ms | Allocations: 284)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1251)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1896)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 2228)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-08 18:26:39 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.1ms | Allocations: 1753)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1810)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2442)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2781)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 18:37:22 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (6.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of suppliers/_supplier.html.erb [3 times] (Duration: 0.8ms | Allocations: 752)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 9666)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 17704)
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 8.6ms | Allocations: 20197)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-08 18:37:23 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:12
+  Rendered collection of suppliers/_supplier.html.erb [3 times] (Duration: 0.6ms | Allocations: 278)
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1239)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1884)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 2234)
+
+
+Started POST "/suppliers" for 127.0.0.1 at 2024-05-08 18:37:29 -0300
+Processing by SuppliersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "supplier"=>{"name"=>"", "address"=>"", "contact"=>"", "cnpj"=>"", "account"=>"888272", "account_digit"=>"6", "account_type"=>"", "bank"=>""}, "commit"=>"Create Supplier"}
+[31mUnpermitted parameter: :cnpj. Context: { controller: SuppliersController, action: create, request: #<ActionDispatch::Request:0x00007232c46cd3d8>, params: {"authenticity_token"=>"[FILTERED]", "supplier"=>{"name"=>"", "address"=>"", "contact"=>"", "cnpj"=>"", "account"=>"888272", "account_digit"=>"6", "account_type"=>"", "bank"=>""}, "commit"=>"Create Supplier", "controller"=>"suppliers", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+  [1m[36mSupplier Create (1.7ms)[0m  [1m[32mINSERT INTO "suppliers" ("name", "address", "contact", "account", "account_digit", "account_type", "bank", "created_at", "updated_at", "cnpj") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", ""], ["address", ""], ["contact", ""], ["account", "888272"], ["account_digit", "6"], ["account_type", ""], ["bank", ""], ["created_at", "2024-05-08 21:37:29.564286"], ["updated_at", "2024-05-08 21:37:29.564286"], ["cnpj", nil]]
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/suppliers_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/suppliers/4
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms | Allocations: 3402)
+
+
+Started GET "/suppliers/4" for 127.0.0.1 at 2024-05-08 18:37:29 -0300
+Processing by SuppliersController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:63:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/_supplier.html.erb (Duration: 0.6ms | Allocations: 438)
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1303)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1931)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 3620)
+
+

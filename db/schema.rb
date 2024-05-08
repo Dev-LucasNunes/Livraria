@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_06_204622) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_08_211832) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,6 +61,19 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_06_204622) do
     t.string "isbn"
     t.string "photo"
     t.index ["author_id"], name: "index_books_on_author_id"
+  end
+
+  create_table "suppliers", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "contact"
+    t.string "account"
+    t.string "account_digit"
+    t.string "account_type"
+    t.string "bank"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "cnpj"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

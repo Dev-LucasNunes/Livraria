@@ -1,0 +1,63 @@
+<div class=" border border-blue-700 p-8 flex flex-col justify-center">
+  <%= form_with(model: supplier, class: "contents") do |form| %>
+    <% if supplier.errors.any? %>
+      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+
+        <ul>
+          <% supplier.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <h1 class="font-bold text-4xl text-blue-600">Novo fornecedor</h1>
+    <div class="my-5">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "block shadow rounded-md border  outline-none px-3 py-2 mt-2 w-1/3" %>
+    </div>
+
+    <div class="my-5">
+      <%= form.label :address %>
+      <%= form.text_field :address, class: "block shadow rounded-md border  outline-none px-3 py-2 mt-2 w-1/3" %>
+    </div>
+
+    <div class="my-5">
+      <%= form.label :contact %>
+      <%= form.text_field :contact, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2 w-1/3" %>
+    </div>
+
+    <div class="my-5">
+      <%= form.label :cnpj %>
+      <%= form.text_field :cnpj, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2 w-1/3" %>
+    </div>
+
+    <div class="my-5 flex flex-col ">
+      <div class="">
+        <%= form.label :account, "Conta" %>
+        <%= form.text_field :account, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2 w-1/3" %>
+      </div>
+      <div>
+        <%= form.label :account_digit, "Dígito" %>
+        <%= form.text_field :account_digit, class: "block shadow rounded-md border outline-none  mt-2 w-10" %>
+      </div>
+    </div>
+
+    <div class="my-5">
+      <%= form.label :account_type %>
+      <%= form.select :account_type, [%w[C/C C/C], %w[Poupança Poupança]], { prompt: "Selecione o tipo de conta" }, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2 w-1/3" %>
+    </div>
+
+    <div class="my-5">
+      <%= form.label :bank %>
+      <%= form.text_field :bank, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2 w-1/3" %>
+    </div>
+
+    <div class="inline mt-4">
+      <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+      <%= link_to "Voltar", suppliers_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    </div>
+  <% end %>
+</div>
+
