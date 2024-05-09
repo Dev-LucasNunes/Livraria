@@ -15,24 +15,31 @@
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Account:</strong>
-    <%= supplier.account %>
+    <strong class="block font-medium mb-1">Cnpj:</strong>
+    <%= supplier.cnpj %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Account digit:</strong>
-    <%= supplier.account_digit %>
-  </p>
+  <% if supplier.account.present? %>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Account:</strong>
+      <%= supplier.account.account %>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Account type:</strong>
-    <%= supplier.account_type %>
-  </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Account digit:</strong>
+      <%= supplier.account.account_digit %>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Bank:</strong>
-    <%= supplier.bank %>
-  </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Account type:</strong>
+      <%= supplier.account.account_type %>
+    </p>
+
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Bank:</strong>
+      <%= supplier.account.bank %>
+    </p>
+  <% end %>
 
   <% if action_name != "show" %>
     <%= link_to "Show this supplier", supplier, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>

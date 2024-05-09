@@ -13,6 +13,7 @@ class SuppliersController < ApplicationController
   # GET /suppliers/new
   def new
     @supplier = Supplier.new
+    @supplier.build_account unless @supplier.account
   end
 
   # GET /suppliers/1/edit
@@ -22,9 +23,10 @@ class SuppliersController < ApplicationController
   # POST /suppliers or /suppliers.json
   def create
     @supplier = Supplier.new(supplier_params)
+    @account = @supplier.build_account(account_params)
 
     respond_to do |format|
-      if @supplier.save
+      if @supplier.save && @account.save
         format.html { redirect_to supplier_url(@supplier), notice: "Supplier was successfully created." }
         format.json { render :show, status: :created, location: @supplier }
       else
@@ -37,7 +39,7 @@ class SuppliersController < ApplicationController
   # PATCH/PUT /suppliers/1 or /suppliers/1.json
   def update
     respond_to do |format|
-      if @supplier.update(supplier_params)
+      if @supplier.update(supplier_params) && @supplier.account.update(account_params)
         format.html { redirect_to supplier_url(@supplier), notice: "Supplier was successfully updated." }
         format.json { render :show, status: :ok, location: @supplier }
       else
@@ -58,13 +60,17 @@ class SuppliersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_supplier
-      @supplier = Supplier.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_supplier
+    @supplier = Supplier.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def supplier_params
-      params.require(:supplier).permit(:name, :address, :contact, :account, :account_digit, :account_type, :bank)
-    end
+  # Only allow a list of trusted parameters through.
+  def supplier_params
+    params.require(:supplier).permit(:name, :address, :contact, :cnpj)
+  end
+
+  def account_params
+    params.require(:supplier).permit(:account, :account_digit, :account_type, :bank)
+  end
 end
