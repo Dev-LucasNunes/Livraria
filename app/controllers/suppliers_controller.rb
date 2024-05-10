@@ -40,7 +40,7 @@ class SuppliersController < ApplicationController
   def update
     respond_to do |format|
       if @supplier.update(supplier_params) && @supplier.account.update(account_params)
-        format.html { redirect_to supplier_url(@supplier), notice: "Supplier was successfully updated." }
+        format.html { redirect_to supplier_url(@supplier), notice: "Fornecedor atualizado com sucesso." }
         format.json { render :show, status: :ok, location: @supplier }
       else
         format.html { render :edit, status: :unprocessable_entity }
