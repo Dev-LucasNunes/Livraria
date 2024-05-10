@@ -3,15 +3,17 @@
     <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
 
     <div class="grid grid-cols-2 gap-4 w-full">
-      <% [:name, :address, :contact, :cnpj].each do |attribute| %>
+      <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
         <div class="flex flex-col items-center w-full">
           <hr class="w-full my-4 border-gray-400">
-          <p class="font-medium text-center mb-2"><%= attribute.to_s.titleize %>:</p>
+          <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
           <p class="text-center"><%= @supplier.send(attribute) %></p>
         </div>
       <% end %>
+    </div>
 
-      <% if @supplier.account %>
+    <% if @supplier.account.present? %>
+      <div class="grid grid-cols-2 gap-4 w-full">
         <% [:account, :account_digit, :account_type, :bank].each do |attribute| %>
           <div class="flex flex-col items-center w-full">
             <hr class="w-full my-4 border-gray-400">
@@ -19,8 +21,9 @@
             <p class="text-center"><%= @supplier.account.send(attribute) %></p>
           </div>
         <% end %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
+
 
     <div class="mt-8">
       <%= link_to edit_supplier_path(@supplier) do %>

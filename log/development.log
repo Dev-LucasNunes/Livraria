@@ -40853,3 +40853,1277 @@ Processing by SuppliersController#index as HTML
 Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms | Allocations: 2722)
 
 
+Started GET "/" for 127.0.0.1 at 2024-05-10 19:09:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 294)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 38618)
+Completed 200 OK in 63ms (Views: 55.0ms | ActiveRecord: 0.0ms | Allocations: 45456)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-10 19:09:12 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 129.4ms | Allocations: 107602)
+  Rendered layout layouts/application.html.erb (Duration: 130.1ms | Allocations: 108286)
+Completed 200 OK in 166ms (Views: 112.6ms | ActiveRecord: 18.1ms | Allocations: 122694)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-10 19:09:16 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3165)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3799)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.5ms | Allocations: 4182)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-10 19:09:17 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (2.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (2.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 100.8ms | Allocations: 223840)
+  Rendered layout layouts/application.html.erb (Duration: 101.8ms | Allocations: 224578)
+Completed 200 OK in 121ms (Views: 88.0ms | ActiveRecord: 14.3ms | Allocations: 241114)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-10 19:09:17 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (1.7ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 10], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: hybwr1n8xv8jazn1nopickci9vso (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEwVDIyOjE0OjE3LjMzN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--04f0a17136661a256be18d2a5528c073f41939eb/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEwVDIyOjE0OjE3LjMzN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--04f0a17136661a256be18d2a5528c073f41939eb/jantar_.jpg
+Completed 302 Found in 50ms (ActiveRecord: 5.0ms | Allocations: 29390)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEwVDIyOjE0OjE3LjMzN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--04f0a17136661a256be18d2a5528c073f41939eb/jantar_.jpg" for 127.0.0.1 at 2024-05-10 19:09:17 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 364)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-10 19:09:19 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (1.5ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (1.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 51.8ms | Allocations: 110195)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 110871)
+Completed 200 OK in 55ms (Views: 43.0ms | ActiveRecord: 10.1ms | Allocations: 113015)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-10 19:10:12 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 23.2ms | Allocations: 13596)
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | Allocations: 21638)
+Completed 200 OK in 47ms (Views: 38.4ms | ActiveRecord: 5.4ms | Allocations: 24764)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-10 19:10:30 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 13721)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 21724)
+Completed 200 OK in 27ms (Views: 19.6ms | ActiveRecord: 5.4ms | Allocations: 24852)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-10 19:10:43 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 13595)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 21594)
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 3.5ms | Allocations: 24717)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-10 19:10:53 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 13653)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 21652)
+Completed 200 OK in 31ms (Views: 21.6ms | ActiveRecord: 6.1ms | Allocations: 24774)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-10 19:11:03 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 13645)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 21631)
+Completed 200 OK in 26ms (Views: 19.2ms | ActiveRecord: 3.9ms | Allocations: 24749)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-10 19:11:14 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 13576)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 21562)
+Completed 200 OK in 33ms (Views: 25.2ms | ActiveRecord: 4.9ms | Allocations: 24680)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:12:44 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:14
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1871)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2500)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 4134)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:12:44 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:14
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1336)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1964)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 2820)
+
+
+Started GET "/suppliers/12/edit" for 127.0.0.1 at 2024-05-10 19:12:46 -0300
+Processing by SuppliersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/edit.html.erb within layouts/application
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/_form.html.erb:40
+  Rendered suppliers/_form.html.erb (Duration: 15.2ms | Allocations: 6686)
+  Rendered suppliers/edit.html.erb within layouts/application (Duration: 15.9ms | Allocations: 6979)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 7644)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.4ms | Allocations: 8582)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-10 19:12:49 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 7133)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 7803)
+Completed 200 OK in 16ms (Views: 9.8ms | ActiveRecord: 3.2ms | Allocations: 10360)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-10 19:13:00 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 1.1ms | Allocations: 1198)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1385)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2017)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 2759)
+
+
+Started GET "/suppliers/new" for 127.0.0.1 at 2024-05-10 19:13:40 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 1.9ms | Allocations: 2461)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2740)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 10695)
+Completed 200 OK in 20ms (Views: 7.2ms | ActiveRecord: 3.8ms | Allocations: 23545)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-10 19:14:01 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 45.6ms | Allocations: 30504)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 31242)
+Completed 200 OK in 57ms (Views: 36.1ms | ActiveRecord: 10.7ms | Allocations: 44421)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-10 19:14:01 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3659)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4293)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 4827)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:14:02 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:14
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1789)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2417)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 3980)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:18:49 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:16
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 9444)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 17468)
+Completed 200 OK in 22ms (Views: 12.6ms | ActiveRecord: 3.6ms | Allocations: 25223)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:19:12 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2264)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2353)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.7ms | Allocations: 10084)
+
+
+  
+ActionView::Template::Error ([:Nome, :name] is not a symbol nor a string):
+     7:         <div class="flex flex-col items-center w-full">
+     8:           <hr class="w-full my-4 border-gray-400">
+     9:           <p class="font-medium text-center mb-2"><%= attribute.to_s.titleize %>:</p>
+    10:           <p class="text-center"><%= @supplier.send(attribute) %></p>
+    11:         </div>
+    12:       <% end %>
+    13:       
+  
+app/views/suppliers/show.html.erb:10
+app/views/suppliers/show.html.erb:6:in `each'
+app/views/suppliers/show.html.erb:6
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:19:34 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:14
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 9400)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 17424)
+Completed 200 OK in 35ms (Views: 18.4ms | ActiveRecord: 6.6ms | Allocations: 25175)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:21:26 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1487)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1568)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.5ms | Allocations: 9228)
+
+
+  
+ActionView::Template::Error (nil is not a symbol nor a string):
+     7:         <div class="flex flex-col items-center w-full">
+     8:           <hr class="w-full my-4 border-gray-400">
+     9:           <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+    10:           <p class="text-center"><%= @supplier.send(attribute) %></p>
+    11:         </div>
+    12:       <% end %>
+    13: 
+  
+app/views/suppliers/show.html.erb:10
+app/views/suppliers/show.html.erb:6:in `each'
+app/views/suppliers/show.html.erb:6
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:22:59 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1070)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1145)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 2061)
+
+
+  
+ActionView::Template::Error (nil is not a symbol nor a string):
+     7:         <div class="flex flex-col items-center w-full">
+     8:           <hr class="w-full my-4 border-gray-400">
+     9:           <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+    10:           <p class="text-center"><%= @supplier.send(attribute) %></p>
+    11:         </div>
+    12:       <% end %>
+    13: 
+  
+app/views/suppliers/show.html.erb:10
+app/views/suppliers/show.html.erb:6:in `each'
+app/views/suppliers/show.html.erb:6
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:23:07 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1070)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1145)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1977)
+
+
+  
+ActionView::Template::Error (nil is not a symbol nor a string):
+     7:         <div class="flex flex-col items-center w-full">
+     8:           <hr class="w-full my-4 border-gray-400">
+     9:           <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+    10:           <p class="text-center"><%= @supplier.send(attribute) %></p>
+    11:         </div>
+    12:       <% end %>
+    13: 
+  
+app/views/suppliers/show.html.erb:10
+app/views/suppliers/show.html.erb:6:in `each'
+app/views/suppliers/show.html.erb:6
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:23:17 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:16
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 9442)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 17466)
+Completed 200 OK in 27ms (Views: 13.3ms | ActiveRecord: 6.2ms | Allocations: 25216)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:23:39 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1494)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1575)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.5ms | Allocations: 9293)
+
+
+  
+ActionView::Template::Error ({:Nome=>:name, :Endereço=>:address, :Contato=>:contact, :CNPJ=>:cnpj} is not a symbol nor a string):
+     7:         <div class="flex flex-col items-center w-full">
+     8:           <hr class="w-full my-4 border-gray-400">
+     9:           <p class="font-medium text-center mb-2"><%= attribute.to_s.titleize %>:</p>
+    10:           <p class="text-center"><%= @supplier.send(attribute) %></p>
+    11:         </div>
+    12:       <% end %>
+    13: 
+  
+app/views/suppliers/show.html.erb:10
+app/views/suppliers/show.html.erb:6:in `each'
+app/views/suppliers/show.html.erb:6
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:23:45 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:14
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 9410)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 17434)
+Completed 200 OK in 25ms (Views: 13.2ms | ActiveRecord: 6.0ms | Allocations: 25207)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:26:02 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1501)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1582)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.4ms | Allocations: 9269)
+
+
+  
+ActionView::Template::Error (nil is not a symbol nor a string):
+     7:         <div class="flex flex-col items-center w-full">
+     8:           <hr class="w-full my-4 border-gray-400">
+     9:           <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+    10:           <p class="text-center"><%= @supplier.send(attribute) %></p>
+    11:         </div>
+    12:       <% end %>
+    13:     </div>
+  
+app/views/suppliers/show.html.erb:10
+app/views/suppliers/show.html.erb:6:in `each'
+app/views/suppliers/show.html.erb:6
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:26:34 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1499)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1580)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.8ms | Allocations: 9245)
+
+
+  
+ActionView::Template::Error (nil is not a symbol nor a string):
+     7:         <div class="flex flex-col items-center w-full">
+     8:           <hr class="w-full my-4 border-gray-400">
+     9:           <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+    10:           <p class="text-center"><%= @supplier.send(attribute) %></p>
+    11:         </div>
+    12:       <% end %>
+    13:     
+  
+app/views/suppliers/show.html.erb:10
+app/views/suppliers/show.html.erb:6:in `each'
+app/views/suppliers/show.html.erb:6
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:28:11 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:15
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 10.8ms | Allocations: 9444)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 17469)
+Completed 200 OK in 27ms (Views: 14.9ms | ActiveRecord: 6.4ms | Allocations: 25224)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:29:23 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1355)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1442)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.8ms | Allocations: 9157)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="flex justify-center r items-center h-screen mb-10">
+  <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+    <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+
+    <div class="grid grid-cols-2 gap-4 w-full">
+      <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+        <div class="flex flex-col items-center w-full">
+          <hr class="w-full my-4 border-gray-400">
+          <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+          <p class="text-center"><%= @supplier.send(attribute) %></p>
+        </div>
+      <% end %>
+    </div>
+
+      <% if @supplier.account %>
+      <div class="grid grid-cols-2 gap-4 w-full">
+        <% { "Conta": :account, "Dígito da Conta": :account_digit, "Tipo de Conta": :account_type, "Banco": :bank }.each do |label, attribute| %>
+          <div class="flex flex-col items-center w-full">
+            <hr class="w-full my-4 border-gray-400">
+            <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+            <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+          </div>
+        <% end %>
+      </div>
+
+
+    <div class="mt-8">
+      <%= link_to edit_supplier_path(@supplier) do %>
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+          Editar
+        </button>
+      <% end %>
+      <div class="inline-block ml-2">
+        <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+      </div>
+      <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="flex justify-center r items-center h-screen mb-10">
+2:      <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+3:        <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+4:    
+5:        <div class="grid grid-cols-2 gap-4 w-full">
+6:          <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+7:            <div class="flex flex-col items-center w-full">
+8:              <hr class="w-full my-4 border-gray-400">
+9:              <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+10:              <p class="text-center"><%= @supplier.send(attribute) %></p>
+11:            </div>
+12:          <% end %>
+13:        </div>
+14:    
+15:          <% if @supplier.account %>
+16:          <div class="grid grid-cols-2 gap-4 w-full">
+17:            <% { "Conta": :account, "Dígito da Conta": :account_digit, "Tipo de Conta": :account_type, "Banco": :bank }.each do |label, attribute| %>
+18:              <div class="flex flex-col items-center w-full">
+19:                <hr class="w-full my-4 border-gray-400">
+20:                <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+21:                <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+22:              </div>
+23:            <% end %>
+24:          </div>
+25:    
+26:    
+27:        <div class="mt-8">
+28:          <%= link_to edit_supplier_path(@supplier) do %>
+29:            <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+30:              Editar
+31:            </button>
+32:          <% end %>
+33:          <div class="inline-block ml-2">
+34:            <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+35:          </div>
+36:          <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+37:        </div>
+38:      </div>
+39:    </div>
+  
+app/views/suppliers/show.html.erb:42: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:29:38 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:15
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 9434)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 17459)
+Completed 200 OK in 23ms (Views: 12.5ms | ActiveRecord: 4.7ms | Allocations: 25270)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:30:05 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1326)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1413)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.4ms | Allocations: 9095)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="flex justify-center r items-center h-screen mb-10">
+  <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+    <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+
+    <div class="grid grid-cols-2 gap-4 w-full">
+      <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+        <div class="flex flex-col items-center w-full">
+          <hr class="w-full my-4 border-gray-400">
+          <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+          <p class="text-center"><%= @supplier.send(attribute) %></p>
+        </div>
+      <% end %>
+    </div>
+
+      <% if @supplier.account %>
+      <div class="grid grid-cols-2 gap-4 w-full">
+        <% { "Conta": :account, "Dígito da Conta": :account_digit, "Tipo de Conta": :account_type, "Banco": :bank }.each do |label, attribute| %>
+          <div class="flex flex-col items-center w-full">
+            <hr class="w-full my-4 border-gray-400">
+            <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+            <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+          </div>
+        <% end %>
+      </div>
+
+    <div class="mt-8">
+      <%= link_to edit_supplier_path(@supplier) do %>
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+          Editar
+        </button>
+      <% end %>
+      <div class="inline-block ml-2">
+        <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+      </div>
+      <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="flex justify-center r items-center h-screen mb-10">
+2:      <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+3:        <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+4:    
+5:        <div class="grid grid-cols-2 gap-4 w-full">
+6:          <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+7:            <div class="flex flex-col items-center w-full">
+8:              <hr class="w-full my-4 border-gray-400">
+9:              <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+10:              <p class="text-center"><%= @supplier.send(attribute) %></p>
+11:            </div>
+12:          <% end %>
+13:        </div>
+14:    
+15:          <% if @supplier.account %>
+16:          <div class="grid grid-cols-2 gap-4 w-full">
+17:            <% { "Conta": :account, "Dígito da Conta": :account_digit, "Tipo de Conta": :account_type, "Banco": :bank }.each do |label, attribute| %>
+18:              <div class="flex flex-col items-center w-full">
+19:                <hr class="w-full my-4 border-gray-400">
+20:                <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+21:                <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+22:              </div>
+23:            <% end %>
+24:          </div>
+25:    
+26:        <div class="mt-8">
+27:          <%= link_to edit_supplier_path(@supplier) do %>
+28:            <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+29:              Editar
+30:            </button>
+31:          <% end %>
+32:          <div class="inline-block ml-2">
+33:            <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+34:          </div>
+35:          <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+36:        </div>
+37:      </div>
+38:    </div>
+  
+app/views/suppliers/show.html.erb:41: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:35:44 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1338)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1428)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.4ms | Allocations: 11914)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="flex justify-center r items-center h-screen mb-10">
+  <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+    <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+
+    <div class="grid grid-cols-2 gap-4 w-full">
+      <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+        <div class="flex flex-col items-center w-full">
+          <hr class="w-full my-4 border-gray-400">
+          <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+          <p class="text-center"><%= @supplier.send(attribute) %></p>
+        </div>
+      <% end %>
+    </div>
+
+      <% if @supplier.account %>
+        <% [ "Conta:": :account, "Dígito:": :account_digit, "Tipo:": :account_type, "Banco": :bank.each do |label, attribute| %>
+          <div class="flex flex-col items-center w-full">
+            <hr class="w-full my-4 border-gray-400">
+            <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+            <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="mt-8">
+      <%= link_to edit_supplier_path(@supplier) do %>
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+          Editar
+        </button>
+      <% end %>
+      <div class="inline-block ml-2">
+        <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+      </div>
+      <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="flex justify-center r items-center h-screen mb-10">
+2:      <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+3:        <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+4:    
+5:        <div class="grid grid-cols-2 gap-4 w-full">
+6:          <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+7:            <div class="flex flex-col items-center w-full">
+8:              <hr class="w-full my-4 border-gray-400">
+9:              <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+10:              <p class="text-center"><%= @supplier.send(attribute) %></p>
+11:            </div>
+12:          <% end %>
+13:        </div>
+14:    
+15:          <% if @supplier.account %>
+16:            <% [ "Conta:": :account, "Dígito:": :account_digit, "Tipo:": :account_type, "Banco": :bank.each do |label, attribute| %>
+17:              <div class="flex flex-col items-center w-full">
+18:                <hr class="w-full my-4 border-gray-400">
+19:                <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+20:                <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+21:              </div>
+22:            <% end %>
+23:          <% end %>
+24:        </div>
+25:    
+26:        <div class="mt-8">
+27:          <%= link_to edit_supplier_path(@supplier) do %>
+28:            <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+29:              Editar
+30:            </button>
+31:          <% end %>
+32:          <div class="inline-block ml-2">
+33:            <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+34:          </div>
+35:          <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+36:        </div>
+37:      </div>
+38:    </div>
+  
+app/views/suppliers/show.html.erb:23: syntax error, unexpected `end', expecting ']'
+app/views/suppliers/show.html.erb:41: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:36:16 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1327)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1417)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 5.0ms | Allocations: 9195)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="flex justify-center r items-center h-screen mb-10">
+  <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+    <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+
+    <div class="grid grid-cols-2 gap-4 w-full">
+      <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+        <div class="flex flex-col items-center w-full">
+          <hr class="w-full my-4 border-gray-400">
+          <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+          <p class="text-center"><%= @supplier.send(attribute) %></p>
+        </div>
+      <% end %>
+    </div>
+
+      <% if @supplier.account %>
+        <% [ "Conta:": :account, "Dígito:": :account_digit, "Tipo:": :account_type, "Banco": :bank.each do |label, attribute| %>
+          <div class="flex flex-col items-center w-full">
+            <hr class="w-full my-4 border-gray-400">
+            <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+            <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+          </div>
+      <% end %>
+    </div>
+
+    <div class="mt-8">
+      <%= link_to edit_supplier_path(@supplier) do %>
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+          Editar
+        </button>
+      <% end %>
+      <div class="inline-block ml-2">
+        <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+      </div>
+      <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="flex justify-center r items-center h-screen mb-10">
+2:      <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+3:        <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+4:    
+5:        <div class="grid grid-cols-2 gap-4 w-full">
+6:          <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+7:            <div class="flex flex-col items-center w-full">
+8:              <hr class="w-full my-4 border-gray-400">
+9:              <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+10:              <p class="text-center"><%= @supplier.send(attribute) %></p>
+11:            </div>
+12:          <% end %>
+13:        </div>
+14:    
+15:          <% if @supplier.account %>
+16:            <% [ "Conta:": :account, "Dígito:": :account_digit, "Tipo:": :account_type, "Banco": :bank.each do |label, attribute| %>
+17:              <div class="flex flex-col items-center w-full">
+18:                <hr class="w-full my-4 border-gray-400">
+19:                <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+20:                <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+21:              </div>
+22:          <% end %>
+23:        </div>
+24:    
+25:        <div class="mt-8">
+26:          <%= link_to edit_supplier_path(@supplier) do %>
+27:            <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+28:              Editar
+29:            </button>
+30:          <% end %>
+31:          <div class="inline-block ml-2">
+32:            <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+33:          </div>
+34:          <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+35:        </div>
+36:      </div>
+37:    </div>
+  
+app/views/suppliers/show.html.erb:23: syntax error, unexpected instance variable, expecting ']'
+app/views/suppliers/show.html.erb:40: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:36:27 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1326)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1416)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.3ms | Allocations: 9229)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="flex justify-center r items-center h-screen mb-10">
+  <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+    <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+
+    <div class="grid grid-cols-2 gap-4 w-full">
+      <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+        <div class="flex flex-col items-center w-full">
+          <hr class="w-full my-4 border-gray-400">
+          <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+          <p class="text-center"><%= @supplier.send(attribute) %></p>
+        </div>
+      <% end %>
+    </div>
+
+      <% if @supplier.account %>
+        <% [ "Conta:": :account, "Dígito:": :account_digit, "Tipo:": :account_type, "Banco": :bank.each do |label, attribute| %>
+          <div class="flex flex-col items-center w-full">
+            <hr class="w-full my-4 border-gray-400">
+            <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+            <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+          </div>
+      <% end %>
+
+    <div class="mt-8">
+      <%= link_to edit_supplier_path(@supplier) do %>
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+          Editar
+        </button>
+      <% end %>
+      <div class="inline-block ml-2">
+        <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+      </div>
+      <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="flex justify-center r items-center h-screen mb-10">
+2:      <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+3:        <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+4:    
+5:        <div class="grid grid-cols-2 gap-4 w-full">
+6:          <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+7:            <div class="flex flex-col items-center w-full">
+8:              <hr class="w-full my-4 border-gray-400">
+9:              <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+10:              <p class="text-center"><%= @supplier.send(attribute) %></p>
+11:            </div>
+12:          <% end %>
+13:        </div>
+14:    
+15:          <% if @supplier.account %>
+16:            <% [ "Conta:": :account, "Dígito:": :account_digit, "Tipo:": :account_type, "Banco": :bank.each do |label, attribute| %>
+17:              <div class="flex flex-col items-center w-full">
+18:                <hr class="w-full my-4 border-gray-400">
+19:                <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+20:                <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+21:              </div>
+22:          <% end %>
+23:    
+24:        <div class="mt-8">
+25:          <%= link_to edit_supplier_path(@supplier) do %>
+26:            <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+27:              Editar
+28:            </button>
+29:          <% end %>
+30:          <div class="inline-block ml-2">
+31:            <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+32:          </div>
+33:          <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+34:        </div>
+35:      </div>
+36:    </div>
+  
+app/views/suppliers/show.html.erb:23: syntax error, unexpected instance variable, expecting ']'
+app/views/suppliers/show.html.erb:39: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:39:27 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:15
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 14.3ms | Allocations: 9446)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 17470)
+Completed 200 OK in 33ms (Views: 18.2ms | ActiveRecord: 6.6ms | Allocations: 25219)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:40:58 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:15
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 9658)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 9739)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 4.6ms | Allocations: 17397)
+
+
+  
+ActionView::Template::Error (nil is not a symbol nor a string):
+    17:         <div class="flex flex-col items-center w-full">
+    18:           <hr class="w-full my-4 border-gray-400">
+    19:           <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+    20:           <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+    21:         </div>
+    22:       <% end %>
+    23:     <% end %>
+  
+app/views/suppliers/show.html.erb:20
+app/views/suppliers/show.html.erb:16:in `each'
+app/views/suppliers/show.html.erb:16
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:42:15 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:16
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 13.4ms | Allocations: 9681)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 9762)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 6.9ms | Allocations: 17489)
+
+
+  
+ActionView::Template::Error (nil is not a symbol nor a string):
+    17:         <div class="flex flex-col items-center w-full">
+    18:           <hr class="w-full my-4 border-gray-400">
+    19:           <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+    20:           <p class="text-center"><%= @supplier.account&.send(attribute) %></p>
+    21:         </div>
+    22:       <% end %>
+    23:     <% end %>
+  
+app/views/suppliers/show.html.erb:20
+app/views/suppliers/show.html.erb:15:in `each'
+app/views/suppliers/show.html.erb:15
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:42:22 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:15
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 9661)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 9742)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 5.8ms | Allocations: 17524)
+
+
+  
+ActionView::Template::Error (nil is not a symbol nor a string):
+    17:         <div class="flex flex-col items-center w-full">
+    18:           <hr class="w-full my-4 border-gray-400">
+    19:           <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+    20:           <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+    21:         </div>
+    22:       <% end %>
+    23:     <% end %>
+  
+app/views/suppliers/show.html.erb:20
+app/views/suppliers/show.html.erb:16:in `each'
+app/views/suppliers/show.html.erb:16
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:42:33 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:15
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 9452)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 17477)
+Completed 200 OK in 26ms (Views: 13.7ms | ActiveRecord: 6.1ms | Allocations: 25290)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:43:19 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:15
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1358)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1987)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2892)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:44:29 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1336)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1423)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.7ms | Allocations: 9105)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="flex justify-center r items-center h-screen mb-10">
+  <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+    <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+
+    <div class="grid grid-cols-2 gap-4 w-full">
+      <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+        <div class="flex flex-col items-center w-full">
+          <hr class="w-full my-4 border-gray-400">
+          <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+          <p class="text-center"><%= @supplier.send(attribute) %></p>
+        </div>
+      <% end %>
+    </div>
+
+      <% if @supplier.account %>
+      <% { "Conta:": :account, "Dígito:": :account_digit, "Tipo:": :account_type, "Banco:": :bank }.each do |label, attribute| %>
+        <% if @supplier.account.present? %>
+          <div class="flex flex-col items-center w-full">
+            <hr class="w-full my-4 border-gray-400">
+            <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+            <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="mt-8">
+      <%= link_to edit_supplier_path(@supplier) do %>
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+          Editar
+        </button>
+      <% end %>
+      <div class="inline-block ml-2">
+        <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+      </div>
+      <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="flex justify-center r items-center h-screen mb-10">
+2:      <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+3:        <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+4:    
+5:        <div class="grid grid-cols-2 gap-4 w-full">
+6:          <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+7:            <div class="flex flex-col items-center w-full">
+8:              <hr class="w-full my-4 border-gray-400">
+9:              <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+10:              <p class="text-center"><%= @supplier.send(attribute) %></p>
+11:            </div>
+12:          <% end %>
+13:        </div>
+14:    
+15:          <% if @supplier.account %>
+16:          <% { "Conta:": :account, "Dígito:": :account_digit, "Tipo:": :account_type, "Banco:": :bank }.each do |label, attribute| %>
+17:            <% if @supplier.account.present? %>
+18:              <div class="flex flex-col items-center w-full">
+19:                <hr class="w-full my-4 border-gray-400">
+20:                <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+21:                <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+22:              </div>
+23:            <% end %>
+24:          <% end %>
+25:        </div>
+26:    
+27:        <div class="mt-8">
+28:          <%= link_to edit_supplier_path(@supplier) do %>
+29:            <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+30:              Editar
+31:            </button>
+32:          <% end %>
+33:          <div class="inline-block ml-2">
+34:            <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+35:          </div>
+36:          <%= link_to "Voltar", supplier_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+37:        </div>
+38:      </div>
+39:    </div>
+  
+app/views/suppliers/show.html.erb:42: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:44:51 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:15
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 9445)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 17469)
+Completed 200 OK in 33ms (Views: 18.7ms | ActiveRecord: 6.8ms | Allocations: 25276)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:45:23 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:15
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 9477)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 17502)
+Completed 200 OK in 25ms (Views: 13.1ms | ActiveRecord: 6.2ms | Allocations: 25215)
+
+
+Started GET "/suppliers/12/edit" for 127.0.0.1 at 2024-05-10 19:45:32 -0300
+Processing by SuppliersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/edit.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/_form.html.erb:40
+  Rendered suppliers/_form.html.erb (Duration: 5.1ms | Allocations: 3073)
+  Rendered suppliers/edit.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3319)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3948)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 4930)
+
+
+Started GET "/suppliers/12" for 127.0.0.1 at 2024-05-10 19:45:55 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:65:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 12], ["LIMIT", 1]]
+  ↳ app/views/suppliers/show.html.erb:15
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 9460)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 17437)
+Completed 200 OK in 24ms (Views: 12.9ms | ActiveRecord: 4.0ms | Allocations: 25122)
+
+
