@@ -11,13 +11,13 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :title %>
+    <%= form.label :title, "Título" %>
     <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
     <%= form.label :author_id %>
-    <%= form.collection_select :author_id, Author.all, :id, :name, { prompt: "Select author" }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.collection_select :author_id, Author.all, :id, :name, { prompt: "Selecione o autor" }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">

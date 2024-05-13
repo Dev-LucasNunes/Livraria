@@ -1,0 +1,44 @@
+<div class="flex flex-col justify-center items-center h-screen mb-10">
+  <div class="mx-auto py-4">
+    <% if notice.present? %>
+      <p id="danger" class="p-4 relative bottom-6 text-sm text-green-800 rounded-lg bg-green-200 dark:bg-gray-800 dark:text-red-400" role="alert" data-controller="timeout"><%= notice %></p>
+    <% end %>
+  </div>
+  <div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center items-center" style="margin-bottom: 15vh;">
+    <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do fornecedor</h1>
+
+    <div class="grid grid-cols-2 gap-4 w-full">
+      <% { "Nome": :name, "Endereço": :address, "Contato": :contact, "CNPJ": :cnpj }.each do |label, attribute| %>
+        <div class="flex flex-col items-center w-full">
+          <hr class="w-full my-4 border-gray-400">
+          <p class="font-medium text-center mb-2"><%= label.to_s.titleize %>:</p>
+          <p class="text-center"><%= @supplier.send(attribute) %></p>
+        </div>
+      <% end %>
+    </div>
+
+    <% if @supplier.account.present? %>
+      <div class="grid grid-cols-2 gap-4 w-full">
+        <% [:account, :account_digit, :account_type, :bank].each do |attribute| %>
+          <div class="flex flex-col items-center w-full">
+            <hr class="w-full my-4 border-gray-400">
+            <p class="font-medium text-center mb-2"><%= attribute.to_s.titleize %>:</p>
+            <p class="text-center"><%= @supplier.account.send(attribute) %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="mt-8">
+      <%= link_to edit_supplier_path(@supplier) do %>
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+          Editar
+        </button>
+      <% end %>
+      <div class="inline-block ml-2">
+        <%= button_to "Excluir", @supplier, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+      </div>
+      <%= link_to "Voltar", suppliers_url, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+    </div>
+  </div>
+</div>
