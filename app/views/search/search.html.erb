@@ -1,0 +1,23 @@
+<% if @books.present? %>
+  <% @books.each do |book| %>
+    <%= book.title %>
+    <%= book.author.name %>
+    <!-- Outros atributos específicos para livros -->
+  <% end %>
+<% elsif @authors.present? %>
+  <!-- Exibir resultados para autores -->
+  <% @authors.each do |author| %>
+    <!-- Exibir atributos específicos para autores -->
+    <%= author.name %>
+    <!-- Outros atributos específicos para autores -->
+  <% end %>
+<% elsif @suppliers.present? %>
+  <!-- Exibir resultados para fornecedores -->
+  <% @suppliers.each do |supplier| %>
+    <!-- Exibir atributos específicos para fornecedores -->
+    <%= supplier.name %>
+    <!-- Outros atributos específicos para fornecedores -->
+  <% end %>
+<% else %>
+  <p>Nenhum resultado encontrado.</p>
+<% end %>

@@ -46903,3 +46903,754 @@ Processing by SuppliersController#edit as HTML
 Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 3474)
 
 
+Started GET "/" for 127.0.0.1 at 2024-05-13 12:41:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 294)
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | Allocations: 40714)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.0ms | Allocations: 47558)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-13 12:41:55 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 99.1ms | Allocations: 105435)
+  Rendered layout layouts/application.html.erb (Duration: 100.1ms | Allocations: 106119)
+Completed 200 OK in 119ms (Views: 95.0ms | ActiveRecord: 5.8ms | Allocations: 120527)
+
+
+Started GET "/authors/83/edit" for 127.0.0.1 at 2024-05-13 12:41:56 -0300
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 4.5ms | Allocations: 3356)
+  Rendered authors/edit.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3825)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4493)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 7781)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-13 12:42:01 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 3119)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3755)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 4136)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 12:42:02 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 830)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1140)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-13 12:42:03 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 86.9ms | Allocations: 222047)
+  Rendered layout layouts/application.html.erb (Duration: 87.6ms | Allocations: 222785)
+Completed 200 OK in 106ms (Views: 81.3ms | ActiveRecord: 7.0ms | Allocations: 239338)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-13 12:42:03 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 10], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: hybwr1n8xv8jazn1nopickci9vso (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE1OjQ3OjAzLjYyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--450008ff7c3c3c39731c57adaa726e16e228393b/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE1OjQ3OjAzLjYyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--450008ff7c3c3c39731c57adaa726e16e228393b/jantar_.jpg
+Completed 302 Found in 40ms (ActiveRecord: 2.3ms | Allocations: 29347)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE1OjQ3OjAzLjYyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--450008ff7c3c3c39731c57adaa726e16e228393b/jantar_.jpg" for 127.0.0.1 at 2024-05-13 12:42:03 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 364)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-13 12:42:05 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 16], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 17], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 36.8ms | Allocations: 111143)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 111819)
+Completed 200 OK in 40ms (Views: 34.1ms | ActiveRecord: 3.7ms | Allocations: 113959)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-13 13:06:11 -0300
+Processing by BooksController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 8886)
+
+
+  
+NameError (uninitialized constant Book::PgSearch):
+  
+app/models/book.rb:8:in `<class:Book>'
+app/models/book.rb:1:in `<main>'
+app/controllers/books_controller.rb:6:in `index'
+Started GET "/" for 127.0.0.1 at 2024-05-13 13:12:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 294)
+  Rendered layout layouts/application.html.erb (Duration: 96.5ms | Allocations: 45800)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 0.0ms | Allocations: 52589)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<ActionView::Base:0x0000000000cd78>
+Did you mean?  search_books_path):
+    42:             <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Peças</a>
+    43:           </li>
+    44:           <li>
+    45:             <%= form_tag(search_path, method: :get, class: "search-form") do %>
+    46:               <%= text_field_tag :query, params[:query], placeholder: "Pesquisar" %>
+    47:               <%= submit_tag "Pesquisar" %>
+    48:             <% end %>
+  
+app/views/layouts/application.html.erb:45
+Started GET "/" for 127.0.0.1 at 2024-05-13 13:14:07 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 8846)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 10185)
+
+
+Started GET "/search?query=&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 13:14:56 -0300
+  
+ActionController::RoutingError (uninitialized constant SearchController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-13 13:14:56 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 992)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1333)
+
+
+Started GET "/search?query=jantar&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 13:15:03 -0300
+  
+ActionController::RoutingError (uninitialized constant SearchController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-13 13:15:03 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 933)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1237)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 13:23:58 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 294)
+  Rendered layout layouts/application.html.erb (Duration: 220.1ms | Allocations: 151178)
+Completed 200 OK in 226ms (Views: 222.3ms | ActiveRecord: 0.0ms | Allocations: 158026)
+
+
+Started GET "/search?query=jantar&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 13:24:02 -0300
+  
+ActionController::RoutingError (uninitialized constant SearchController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-13 13:24:03 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1064)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1408)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-13 16:01:17 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 225.6ms | Allocations: 338120)
+  Rendered layout layouts/application.html.erb (Duration: 226.7ms | Allocations: 338955)
+Completed 200 OK in 249ms (Views: 210.8ms | ActiveRecord: 17.0ms | Allocations: 356404)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-13 16:01:17 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 10], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: hybwr1n8xv8jazn1nopickci9vso (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE5OjA2OjE3Ljc0MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bb8a1fd5260781d03ef322de95b8bc99c0d4e2b1/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE5OjA2OjE3Ljc0MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bb8a1fd5260781d03ef322de95b8bc99c0d4e2b1/jantar_.jpg
+Completed 302 Found in 25ms (ActiveRecord: 2.3ms | Allocations: 29394)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE5OjA2OjE3Ljc0MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bb8a1fd5260781d03ef322de95b8bc99c0d4e2b1/jantar_.jpg" for 127.0.0.1 at 2024-05-13 16:01:17 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 364)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:09:20 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 294)
+  Rendered layout layouts/application.html.erb (Duration: 53.9ms | Allocations: 41172)
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 0.0ms | Allocations: 48019)
+
+
+Started GET "/search?query=raphael&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:09:27 -0300
+  
+ActionController::RoutingError (uninitialized constant SearchController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:09:27 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1068)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1410)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:12:54 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 933)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1243)
+
+
+Started GET "/search?query=jantar&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:13:01 -0300
+  
+ActionController::RoutingError (uninitialized constant SearchController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:13:01 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 928)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1234)
+
+
+Started GET "/search?query=jantar&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:13:54 -0300
+  
+ActionController::RoutingError (uninitialized constant SearchController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:13:54 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 943)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1254)
+
+
+Started GET "/search?query=&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:13:55 -0300
+  
+ActionController::RoutingError (uninitialized constant SearchController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:13:55 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 939)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1244)
+
+
+Started GET "/search?query=jantar&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:13:58 -0300
+  
+ActionController::RoutingError (uninitialized constant SearchController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:13:58 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 937)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1242)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:18:05 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 8759)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 10069)
+
+
+Started GET "/search?query=jantar&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:18:08 -0300
+Processing by BooksController#search as HTML
+  Parameters: {"query"=>"jantar", "commit"=>"Pesquisar"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (4.9ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN (SELECT "books"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("books"."title"::text, ''))), (to_tsquery('simple', ''' ' || 'jantar' || ' ''')), 0)) AS rank FROM "books" WHERE ((to_tsvector('simple', coalesce("books"."title"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'jantar' || ' ''')))) AS pg_search_6e317bcd6839e887739541 ON "books"."id" = pg_search_6e317bcd6839e887739541.pg_search_id ORDER BY pg_search_6e317bcd6839e887739541.rank DESC, "books"."id" ASC[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 157.3ms | Allocations: 335077)
+  Rendered layout layouts/application.html.erb (Duration: 158.8ms | Allocations: 335904)
+Completed 200 OK in 190ms (Views: 145.3ms | ActiveRecord: 20.4ms | Allocations: 358532)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-13 16:18:08 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 10], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: hybwr1n8xv8jazn1nopickci9vso (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE5OjIzOjA4LjkwNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9660bd8b954f5c0254fc570bf1e44997f173ecfe/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE5OjIzOjA4LjkwNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9660bd8b954f5c0254fc570bf1e44997f173ecfe/jantar_.jpg
+Completed 302 Found in 36ms (ActiveRecord: 2.1ms | Allocations: 29365)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE5OjIzOjA4LjkwNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9660bd8b954f5c0254fc570bf1e44997f173ecfe/jantar_.jpg" for 127.0.0.1 at 2024-05-13 16:18:08 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 364)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-13 16:18:13 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 9.2ms | Allocations: 5172)
+  Rendered books/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 5533)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6294)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 6817)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-05-13 16:18:27 -0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"it", "author_id"=>"88", "genre"=>"Terror", "publication_date"=>"2024-05-16", "isbn"=>"9788543808031"}, "commit"=>"Criar livro"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:32:in `block in create'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `block in create'
+  [1m[36mBook Create (1.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author_id", "genre", "publication_date", "created_at", "updated_at", "isbn", "photo") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "it"], ["author_id", 88], ["genre", "Terror"], ["publication_date", "2024-05-16"], ["created_at", "2024-05-13 19:18:27.684511"], ["updated_at", "2024-05-13 19:18:27.684511"], ["isbn", "9788543808031"], ["photo", nil]]
+  ↳ app/controllers/books_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:32:in `block in create'
+Redirected to http://127.0.0.1:3000/books/6
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms | Allocations: 5590)
+
+
+Started GET "/books/6" for 127.0.0.1 at 2024-05-13 16:18:27 -0300
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:68:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:25
+  Rendered books/_book.html.erb (Duration: 2.9ms | Allocations: 2413)
+  Rendered books/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3803)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4550)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 6262)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2024-05-13 16:18:30 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:68:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 3.6ms | Allocations: 2420)
+  Rendered books/edit.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2715)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3427)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 4411)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2024-05-13 16:18:31 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:68:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 4.2ms | Allocations: 2289)
+  Rendered books/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2403)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3114)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 3984)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:18:33 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 937)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1243)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-13 16:18:39 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.6ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 16], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 17], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 60.1ms | Allocations: 111094)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 111856)
+Completed 200 OK in 65ms (Views: 55.6ms | ActiveRecord: 6.4ms | Allocations: 113973)
+
+
+Started GET "/search?query=jantar&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:18:45 -0300
+Processing by BooksController#search as HTML
+  Parameters: {"query"=>"jantar", "commit"=>"Pesquisar"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN (SELECT "books"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("books"."title"::text, ''))), (to_tsquery('simple', ''' ' || 'jantar' || ' ''')), 0)) AS rank FROM "books" WHERE ((to_tsvector('simple', coalesce("books"."title"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'jantar' || ' ''')))) AS pg_search_6e317bcd6839e887739541 ON "books"."id" = pg_search_6e317bcd6839e887739541.pg_search_id ORDER BY pg_search_6e317bcd6839e887739541.rank DESC, "books"."id" ASC[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  Rendered books/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 3940)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4718)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.1ms | Allocations: 5598)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-13 16:18:51 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  Rendered books/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 5627)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 6406)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 1.1ms | Allocations: 6737)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-05-13 16:18:55 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:20
+  Rendered books/_form.html.erb (Duration: 4.2ms | Allocations: 2321)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2406)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3121)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 3461)
+
+
+Started GET "/search?query=it&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:18:59 -0300
+Processing by BooksController#search as HTML
+  Parameters: {"query"=>"it", "commit"=>"Pesquisar"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN (SELECT "books"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("books"."title"::text, ''))), (to_tsquery('simple', ''' ' || 'it' || ' ''')), 0)) AS rank FROM "books" WHERE ((to_tsvector('simple', coalesce("books"."title"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'it' || ' ''')))) AS pg_search_6e317bcd6839e887739541 ON "books"."id" = pg_search_6e317bcd6839e887739541.pg_search_id ORDER BY pg_search_6e317bcd6839e887739541.rank DESC, "books"."id" ASC[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  Rendered books/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2787)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3500)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.0ms | Allocations: 4273)
+
+
+Started GET "/search?query=it&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:24:58 -0300
+Processing by SearchController#search as HTML
+  Parameters: {"query"=>"it", "commit"=>"Pesquisar"}
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.3ms | Allocations: 14237)
+
+
+  
+NoMethodError (undefined method `search_by_name' for Author:Class):
+  
+app/controllers/search_controller.rb:4:in `search'
+Started GET "/search?query=it&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:30:10 -0300
+Processing by SearchController#search as HTML
+  Parameters: {"query"=>"it", "commit"=>"Pesquisar"}
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 8.7ms | Allocations: 22796)
+
+
+  
+NoMethodError (undefined method `search_by_name' for Supplier:Class):
+  
+app/controllers/search_controller.rb:5:in `search'
+Started GET "/search?query=it&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:31:38 -0300
+Processing by SearchController#search as HTML
+  Parameters: {"query"=>"it", "commit"=>"Pesquisar"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN (SELECT "books"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("books"."title"::text, ''))), (to_tsquery('simple', ''' ' || 'it' || ' ''')), 0)) AS rank FROM "books" WHERE ((to_tsvector('simple', coalesce("books"."title"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'it' || ' ''')))) AS pg_search_6e317bcd6839e887739541 ON "books"."id" = pg_search_6e317bcd6839e887739541.pg_search_id ORDER BY pg_search_6e317bcd6839e887739541.rank DESC, "books"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:5
+  [1m[36mAuthor Load (1.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN (SELECT "authors"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("authors"."name"::text, ''))), (to_tsquery('simple', ''' ' || 'it' || ' ''')), 0)) AS rank FROM "authors" WHERE ((to_tsvector('simple', coalesce("authors"."name"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'it' || ' ''')))) AS pg_search_8409421872147ea83473d4 ON "authors"."id" = pg_search_8409421872147ea83473d4.pg_search_id ORDER BY pg_search_8409421872147ea83473d4.rank DESC, "authors"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:10
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" INNER JOIN (SELECT "suppliers"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("suppliers"."name"::text, ''))), (to_tsquery('simple', ''' ' || 'it' || ' ''')), 0)) AS rank FROM "suppliers" WHERE ((to_tsvector('simple', coalesce("suppliers"."name"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'it' || ' ''')))) AS pg_search_5fe59515134827f684605b ON "suppliers"."id" = pg_search_5fe59515134827f684605b.pg_search_id ORDER BY pg_search_5fe59515134827f684605b.rank DESC, "suppliers"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:15
+  Rendered search/search.html.erb within layouts/application (Duration: 8.4ms | Allocations: 5942)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 14425)
+Completed 200 OK in 47ms (Views: 13.4ms | ActiveRecord: 8.5ms | Allocations: 36239)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:31:43 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1288)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1831)
+
+
+Started GET "/search?query=jantar&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:31:48 -0300
+Processing by SearchController#search as HTML
+  Parameters: {"query"=>"jantar", "commit"=>"Pesquisar"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN (SELECT "books"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("books"."title"::text, ''))), (to_tsquery('simple', ''' ' || 'jantar' || ' ''')), 0)) AS rank FROM "books" WHERE ((to_tsvector('simple', coalesce("books"."title"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'jantar' || ' ''')))) AS pg_search_6e317bcd6839e887739541 ON "books"."id" = pg_search_6e317bcd6839e887739541.pg_search_id ORDER BY pg_search_6e317bcd6839e887739541.rank DESC, "books"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:5
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN (SELECT "authors"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("authors"."name"::text, ''))), (to_tsquery('simple', ''' ' || 'jantar' || ' ''')), 0)) AS rank FROM "authors" WHERE ((to_tsvector('simple', coalesce("authors"."name"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'jantar' || ' ''')))) AS pg_search_8409421872147ea83473d4 ON "authors"."id" = pg_search_8409421872147ea83473d4.pg_search_id ORDER BY pg_search_8409421872147ea83473d4.rank DESC, "authors"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:10
+  [1m[36mSupplier Load (0.5ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" INNER JOIN (SELECT "suppliers"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("suppliers"."name"::text, ''))), (to_tsquery('simple', ''' ' || 'jantar' || ' ''')), 0)) AS rank FROM "suppliers" WHERE ((to_tsvector('simple', coalesce("suppliers"."name"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'jantar' || ' ''')))) AS pg_search_5fe59515134827f684605b ON "suppliers"."id" = pg_search_5fe59515134827f684605b.pg_search_id ORDER BY pg_search_5fe59515134827f684605b.rank DESC, "suppliers"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:15
+  Rendered search/search.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1984)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2887)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.7ms | Allocations: 4718)
+
+
+Started GET "/search?query=lucas&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:32:40 -0300
+Processing by SearchController#search as HTML
+  Parameters: {"query"=>"lucas", "commit"=>"Pesquisar"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN (SELECT "books"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("books"."title"::text, ''))), (to_tsquery('simple', ''' ' || 'lucas' || ' ''')), 0)) AS rank FROM "books" WHERE ((to_tsvector('simple', coalesce("books"."title"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'lucas' || ' ''')))) AS pg_search_6e317bcd6839e887739541 ON "books"."id" = pg_search_6e317bcd6839e887739541.pg_search_id ORDER BY pg_search_6e317bcd6839e887739541.rank DESC, "books"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:5
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN (SELECT "authors"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("authors"."name"::text, ''))), (to_tsquery('simple', ''' ' || 'lucas' || ' ''')), 0)) AS rank FROM "authors" WHERE ((to_tsvector('simple', coalesce("authors"."name"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'lucas' || ' ''')))) AS pg_search_8409421872147ea83473d4 ON "authors"."id" = pg_search_8409421872147ea83473d4.pg_search_id ORDER BY pg_search_8409421872147ea83473d4.rank DESC, "authors"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:10
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" INNER JOIN (SELECT "suppliers"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("suppliers"."name"::text, ''))), (to_tsquery('simple', ''' ' || 'lucas' || ' ''')), 0)) AS rank FROM "suppliers" WHERE ((to_tsvector('simple', coalesce("suppliers"."name"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'lucas' || ' ''')))) AS pg_search_5fe59515134827f684605b ON "suppliers"."id" = pg_search_5fe59515134827f684605b.pg_search_id ORDER BY pg_search_5fe59515134827f684605b.rank DESC, "suppliers"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:15
+  Rendered search/search.html.erb within layouts/application (Duration: 12.9ms | Allocations: 7457)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 8368)
+Completed 200 OK in 19ms (Views: 14.5ms | ActiveRecord: 1.5ms | Allocations: 10066)
+
+
+Started GET "/search?query=lucas&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:33:48 -0300
+Processing by SearchController#search as HTML
+  Parameters: {"query"=>"lucas", "commit"=>"Pesquisar"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN (SELECT "books"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("books"."title"::text, ''))), (to_tsquery('simple', ''' ' || 'lucas' || ' ''')), 0)) AS rank FROM "books" WHERE ((to_tsvector('simple', coalesce("books"."title"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'lucas' || ' ''')))) AS pg_search_6e317bcd6839e887739541 ON "books"."id" = pg_search_6e317bcd6839e887739541.pg_search_id ORDER BY pg_search_6e317bcd6839e887739541.rank DESC, "books"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:5
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN (SELECT "authors"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("authors"."name"::text, ''))), (to_tsquery('simple', ''' ' || 'lucas' || ' ''')), 0)) AS rank FROM "authors" WHERE ((to_tsvector('simple', coalesce("authors"."name"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'lucas' || ' ''')))) AS pg_search_8409421872147ea83473d4 ON "authors"."id" = pg_search_8409421872147ea83473d4.pg_search_id ORDER BY pg_search_8409421872147ea83473d4.rank DESC, "authors"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:10
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" INNER JOIN (SELECT "suppliers"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("suppliers"."name"::text, ''))), (to_tsquery('simple', ''' ' || 'lucas' || ' ''')), 0)) AS rank FROM "suppliers" WHERE ((to_tsvector('simple', coalesce("suppliers"."name"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'lucas' || ' ''')))) AS pg_search_5fe59515134827f684605b ON "suppliers"."id" = pg_search_5fe59515134827f684605b.pg_search_id ORDER BY pg_search_5fe59515134827f684605b.rank DESC, "suppliers"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:15
+  Rendered search/search.html.erb within layouts/application (Duration: 11.4ms | Allocations: 7934)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 16366)
+Completed 200 OK in 49ms (Views: 20.1ms | ActiveRecord: 7.4ms | Allocations: 38133)
+
+
+Started GET "/search?query=raphael&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:33:53 -0300
+Processing by SearchController#search as HTML
+  Parameters: {"query"=>"raphael", "commit"=>"Pesquisar"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN (SELECT "books"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("books"."title"::text, ''))), (to_tsquery('simple', ''' ' || 'raphael' || ' ''')), 0)) AS rank FROM "books" WHERE ((to_tsvector('simple', coalesce("books"."title"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'raphael' || ' ''')))) AS pg_search_6e317bcd6839e887739541 ON "books"."id" = pg_search_6e317bcd6839e887739541.pg_search_id ORDER BY pg_search_6e317bcd6839e887739541.rank DESC, "books"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:5
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN (SELECT "authors"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("authors"."name"::text, ''))), (to_tsquery('simple', ''' ' || 'raphael' || ' ''')), 0)) AS rank FROM "authors" WHERE ((to_tsvector('simple', coalesce("authors"."name"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'raphael' || ' ''')))) AS pg_search_8409421872147ea83473d4 ON "authors"."id" = pg_search_8409421872147ea83473d4.pg_search_id ORDER BY pg_search_8409421872147ea83473d4.rank DESC, "authors"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:10
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" INNER JOIN (SELECT "suppliers"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("suppliers"."name"::text, ''))), (to_tsquery('simple', ''' ' || 'raphael' || ' ''')), 0)) AS rank FROM "suppliers" WHERE ((to_tsvector('simple', coalesce("suppliers"."name"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'raphael' || ' ''')))) AS pg_search_5fe59515134827f684605b ON "suppliers"."id" = pg_search_5fe59515134827f684605b.pg_search_id ORDER BY pg_search_5fe59515134827f684605b.rank DESC, "suppliers"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:15
+  Rendered search/search.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1965)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2860)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 1.5ms | Allocations: 4675)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:33:56 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1268)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1811)
+
+
+Started GET "/authors" for 127.0.0.1 at 2024-05-13 16:35:15 -0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:35
+  Rendered authors/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3877)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4627)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 5296)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-13 16:35:16 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  Rendered books/index.html.erb within layouts/application (Duration: 42.8ms | Allocations: 26868)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 27695)
+Completed 200 OK in 46ms (Views: 37.1ms | ActiveRecord: 7.4ms | Allocations: 28370)
+
+
+Started GET "/suppliers" for 127.0.0.1 at 2024-05-13 16:35:16 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:47
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 16], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 17], ["LIMIT", 1]]
+  ↳ app/views/suppliers/index.html.erb:63
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 11194)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 11956)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 3.6ms | Allocations: 12633)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 16:38:19 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 8713)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 10020)
+
+
+Started GET "/search?query=jantar&commit=Pesquisar" for 127.0.0.1 at 2024-05-13 16:38:23 -0300
+Processing by SearchController#search as HTML
+  Parameters: {"query"=>"jantar", "commit"=>"Pesquisar"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN (SELECT "books"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("books"."title"::text, ''))), (to_tsquery('simple', ''' ' || 'jantar' || ' ''')), 0)) AS rank FROM "books" WHERE ((to_tsvector('simple', coalesce("books"."title"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'jantar' || ' ''')))) AS pg_search_6e317bcd6839e887739541 ON "books"."id" = pg_search_6e317bcd6839e887739541.pg_search_id ORDER BY pg_search_6e317bcd6839e887739541.rank DESC, "books"."id" ASC[0m
+  ↳ app/views/search/search.html.erb:2
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/search/search.html.erb:30
+  Rendered search/search.html.erb within layouts/application (Duration: 11.8ms | Allocations: 9500)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 10512)
+Completed 200 OK in 46ms (Views: 13.4ms | ActiveRecord: 9.1ms | Allocations: 31528)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-05-13 16:38:47 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:41
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:60
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Book"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:59
+  Rendered books/index.html.erb within layouts/application (Duration: 73.9ms | Allocations: 22147)
+  Rendered layout layouts/application.html.erb (Duration: 75.9ms | Allocations: 22974)
+Completed 200 OK in 77ms (Views: 69.5ms | ActiveRecord: 7.2ms | Allocations: 23649)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6Wzc1LDEwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d5f08b4fe3a44a60599d33c3a73b7dbb51f0a39/jantar_.jpg" for 127.0.0.1 at 2024-05-13 16:38:47 -0300
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--0ca0a4f8a26c6d3fb767db8ba1e3aaf9e9f774a2", "variation_key"=>"[FILTERED]", "filename"=>"jantar_"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.3ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1 AND "active_storage_variant_records"."variation_digest" = $2 LIMIT $3[0m  [["blob_id", 10], ["variation_digest", "CI5jCoMgFylX9dIFrycnAdKFCeQ="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: hybwr1n8xv8jazn1nopickci9vso (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE5OjQzOjQ3LjYxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4e48f350a6e02430c99904df5ba381bb59d08a8b/jantar_.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE5OjQzOjQ3LjYxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4e48f350a6e02430c99904df5ba381bb59d08a8b/jantar_.jpg
+Completed 302 Found in 79ms (ActiveRecord: 3.8ms | Allocations: 14287)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJoeWJ3cjFuOHh2OGphem4xbm9waWNrY2k5dnNvIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamFudGFyXy5qcGdcIjsgZmlsZW5hbWUqPVVURi04JydqYW50YXJfLmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA1LTEzVDE5OjQzOjQ3LjYxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4e48f350a6e02430c99904df5ba381bb59d08a8b/jantar_.jpg" for 127.0.0.1 at 2024-05-13 16:38:47 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jantar_"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 331)
+
+
