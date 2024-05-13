@@ -6,5 +6,9 @@ class Book < ApplicationRecord
   validates :isbn, isbn_format: true
 
   include PgSearch::Model
-  pg_search_scope :search_by_title, against: :title
+  pg_search_scope :search_by_title, against: :title,
+                  using: {
+                    tsearch: { prefix: true } # Habilita pesquisa parcial
+                  }
 end
+
