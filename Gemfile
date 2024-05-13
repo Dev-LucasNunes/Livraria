@@ -72,5 +72,7 @@ gem 'cpf_cnpj'
 gem 'countries'
 gem 'image_processing', '~> 1.2'
 gem 'isbn_validation'
+gem 'brcobranca'
+
 
 

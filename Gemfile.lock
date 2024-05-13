@@ -82,6 +82,11 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
+    brcobranca (11.0.0)
+      fast_blank
+      parseline (>= 1.0.3)
+      rghost (>= 0.9.8)
+      rghost_barcode (>= 0.9)
     builder (3.2.4)
     capybara (3.40.0)
       addressable
@@ -105,6 +110,7 @@ GEM
     diff-lcs (1.5.1)
     drb (2.2.1)
     erubi (1.12.0)
+    fast_blank (1.0.1)
     ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -153,6 +159,7 @@ GEM
     nio4r (2.7.1)
     nokogiri (1.16.4-x86_64-linux)
       racc (~> 1.4)
+    parseline (1.0.3)
     pg (1.5.6)
     psych (5.1.2)
       stringio
@@ -204,6 +211,8 @@ GEM
     reline (0.5.2)
       io-console (~> 0.5)
     rexml (3.2.6)
+    rghost (0.9.9)
+    rghost_barcode (0.9)
     rspec-core (3.13.0)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.0)
@@ -269,6 +278,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  brcobranca
   capybara
   countries
   cpf_cnpj
