@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :suppliers
-  resources :books
+  resources :books do
+    collection do
+      get 'search'
+    end
+  end
   resources :authors
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -10,4 +14,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
+  get '/search', to: 'search#search', as: 'search'
 end

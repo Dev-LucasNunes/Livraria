@@ -4,4 +4,11 @@ class Book < ApplicationRecord
 
   validates :title, presence: { message: "Título é obrigatório" }
   validates :isbn, isbn_format: true
+
+  include PgSearch::Model
+  pg_search_scope :search_by_title, against: :title,
+                  using: {
+                    tsearch: { prefix: true },
+                    trigram: {threshold: 0.1}
+                  }
 end
