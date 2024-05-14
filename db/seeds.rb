@@ -1,26 +1,93 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# Limpa todos os registros de livros e autores existentes
+Author.destroy_all
+Book.destroy_all
+# Criação dos autores
+authors = [
+  { name: 'Machado de Assis', nationality: 'Brasileiro', cpf: '245.702.920-09', date_of_birth: '1839-06-21' },
+  { name: 'Clarice Lispector', nationality: 'Brasileiro', cpf: '271.487.570-76', date_of_birth: '1920-12-10' },
+  { name: 'Guimarães Rosa', nationality: 'Brasileiro', cpf: '022.229.990-93', date_of_birth: '1908-06-27' },
+  { name: 'Carlos Drummond de Andrade', nationality: 'Brasileiro', cpf: '788.826.670-04', date_of_birth: '1902-10-31' },
+  { name: 'Jorge Amado', nationality: 'Brasileiro', cpf: '587.809.690-02', date_of_birth: '1912-08-10' },
+  { name: 'Érico Veríssimo', nationality: 'Brasileiro', cpf: '460.112.870-18', date_of_birth: '1905-12-17' },
+  { name: 'Graciliano Ramos', nationality: 'Brasileiro', cpf: '174.673.390-00', date_of_birth: '1892-10-27' },
+  { name: 'Rubem Fonseca', nationality: 'Brasileiro', cpf: '096.643.350-02', date_of_birth: '1925-05-11' },
+  { name: 'Cecília Meireles', nationality: 'Brasileiro', cpf: '229.507.500-70', date_of_birth: '1901-11-07' },
+  { name: 'Mário de Andrade', nationality: 'Brasileiro', cpf: '280.288.540-87', date_of_birth: '1893-10-09' }
+]
 
-# db/seeds.rb
 
-# Adiciona autores pré-cadastrados
-Author.create(name: "Maria Silva", nationality: "Brasileira", cpf: "123.456.789-00", date_of_birth: Date.new(1980, 5, 15))
-Author.create(name: "Juan Martinez", nationality: "Mexicano", cpf: "987.654.321-00", date_of_birth: Date.new(1975, 11, 20))
-Author.create(name: "Sophie Dupont", nationality: "Francesa", cpf: "456.789.123-00", date_of_birth: Date.new(1990, 9, 3))
-Author.create(name: "Ahmed Khan", nationality: "Indiano", cpf: "654.321.987-00", date_of_birth: Date.new(1988, 7, 25))
-Author.create(name: "Elena Petrov", nationality: "Russa", cpf: "789.123.456-00", date_of_birth: Date.new(1972, 12, 10))
-Author.create(name: "Pedro Alvarez", nationality: "Espanhol", cpf: "321.654.987-00", date_of_birth: Date.new(1985, 6, 18))
-Author.create(name: "Li Wei", nationality: "Chinesa", cpf: "987.123.456-00", date_of_birth: Date.new(1979, 4, 5))
-Author.create(name: "Anna Nowak", nationality: "Polonesa", cpf: "654.987.321-00", date_of_birth: Date.new(1995, 8, 29))
-Author.create(name: "Giovanni Rossi", nationality: "Italiano", cpf: "123.789.456-00", date_of_birth: Date.new(1983, 2, 12))
-Author.create(name: "Fatima Ahmed", nationality: "Egípcia", cpf: "456.321.789-00", date_of_birth: Date.new(1977, 7, 8))
-# Adicione os outros 10 autores aqui...
+# Criação dos autores
+authors.each do |author_attrs|
+  Author.create!(author_attrs)
+end
 
-puts "Autores adicionados com sucesso!"
+# Criação dos livros relacionados aos autores
+books = [
+  { title: 'Dom Casmurro', genre: 'Romance', publication_date: '1899-01-01', isbn: '978-85-7536-125-2', author_name: 'Machado de Assis' },
+  { title: 'A Hora da Estrela', genre: 'Romance', publication_date: '1977-01-01', isbn: '978-85-359-0207-4', author_name: 'Clarice Lispector' },
+  { title: 'Grande Sertão: Veredas', genre: 'Romance', publication_date: '1956-01-01', isbn: '978-85-254-2294-8', author_name: 'Guimarães Rosa' },
+  { title: 'Sentimento do Mundo', genre: 'Poesia', publication_date: '1940-01-01', isbn: '978-85-254-2294-8', author_name: 'Carlos Drummond de Andrade' },
+  { title: 'Dona Flor e Seus Dois Maridos', genre: 'Romance', publication_date: '1966-01-01', isbn: '978-85-01-00018-6', author_name: 'Jorge Amado' },
+  { title: 'Olhai os Lírios do Campo', genre: 'Romance', publication_date: '1938-01-01', isbn: '978-85-01-06258-7', author_name: 'Érico Veríssimo' },
+  { title: 'Vidas Secas', genre: 'Romance', publication_date: '1938-01-01', isbn: '978-85-01-00018-6', author_name: 'Graciliano Ramos' },
+  { title: 'O Cobrador', genre: 'Contos', publication_date: '1979-01-01', isbn: '978-85-01-05423-4', author_name: 'Rubem Fonseca' },
+  { title: 'Espectros', genre: 'Poesia', publication_date: '1919-01-01', isbn: '978-85-01-00018-6', author_name: 'Cecília Meireles' },
+  { title: 'Macunaíma', genre: 'Romance', publication_date: '1928-01-01', isbn: '978-85-01-00018-6', author_name: 'Mário de Andrade' }
+]
+
+# Criação dos livros
+books.each do |book_attrs|
+  author = Author.find_by(name: book_attrs.delete(:author_name))
+  Book.create!(author: author, **book_attrs)
+end
+
+# Limpa todos os registros de fornecedores e contas bancárias existentes
+Supplier.destroy_all
+Account.destroy_all
+
+# Criação dos fornecedores e suas contas bancárias
+suppliers = [
+  {
+    name: 'Papelaria do Saber',
+    address: 'Rua dos Livros, 123',
+    contact: 'papelaria_saber@example.com',
+    cnpj: '00.000.000/0001-01',
+    account_attributes: { account: '1234', account_digit: '1', account_type: 'Corrente', bank: 'Banco A' }
+  },
+  {
+    name: 'Impressões Literárias',
+    address: 'Avenida das Páginas, 456',
+    contact: 'impressoes_literarias@example.com',
+    cnpj: '11.111.111/1111-11',
+    account_attributes: { account: '5678', account_digit: '2', account_type: 'Poupança', bank: 'Banco B' }
+  },
+  {
+    name: 'Editora Imaginação',
+    address: 'Travessa dos Sonhos, 789',
+    contact: 'editora_imaginacao@example.com',
+    cnpj: '22.222.222/2222-22',
+    account_attributes: { account: '9012', account_digit: '3', account_type: 'Corrente', bank: 'Banco C' }
+  },
+  {
+    name: 'Gráfica do Conhecimento',
+    address: 'Rua das Ideias, 1011',
+    contact: 'grafica_conhecimento@example.com',
+    cnpj: '33.333.333/3333-33',
+    account_attributes: { account: '3456', account_digit: '4', account_type: 'Poupança', bank: 'Banco D' }
+  },
+  {
+    name: 'Encadernação Arte & Livros',
+    address: 'Alameda das Capas, 1213',
+    contact: 'encadernacao_arte_livros@example.com',
+    cnpj: '44.444.444/4444-44',
+    account_attributes: { account: '7890', account_digit: '5', account_type: 'Corrente', bank: 'Banco E' }
+  }
+]
+
+# Criação dos fornecedores e suas contas bancárias
+suppliers.each do |supplier_attrs|
+  account_attrs = supplier_attrs.delete(:account_attributes)
+  supplier = Supplier.create!(supplier_attrs)
+  supplier.create_account(account_attrs)
+end
+
