@@ -8,6 +8,13 @@ class Author < ApplicationRecord
 
   validate :cpf_formato_e_validade
 
+  include PgSearch::Model
+  pg_search_scope :search_by_name, against: :name,
+                  using: {
+                    tsearch: { prefix: true },
+                    trigram: {threshold: 0.1}
+                  }
+
   private
 
   def cpf_formato_e_validade
@@ -25,11 +32,4 @@ class Author < ApplicationRecord
       errors.add(:cpf, "Cpf deve conter somente números")
     end
   end
-
-  include PgSearch::Model
-  include PgSearch::Model
-  pg_search_scope :search_by_name, against: :name,
-                  using: {
-                    tsearch: { prefix: true } # Habilita pesquisa parcial
-                  }
 end

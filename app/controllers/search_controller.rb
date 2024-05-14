@@ -1,7 +1,8 @@
 class SearchController < ApplicationController
   def search
-    @books = Book.search_by_title(params[:query])
-    @authors = Author.search_by_name(params[:query])
-    @suppliers = Supplier.search_by_name(params[:query])
+    query = params[:query]
+    @books = Book.search_by_title(query)
+    @authors = Author.search_by_name(query)
+    @suppliers = Supplier.search_by_name(query)
   end
 end

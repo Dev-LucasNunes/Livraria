@@ -1,5 +1,6 @@
 # Limpa todos os registros de livros e autores existentes
-
+Author.destroy_all
+Book.destroy_all
 # Criação dos autores
 authors = [
   { name: 'Machado de Assis', nationality: 'Brasileiro', cpf: '245.702.920-09', date_of_birth: '1839-06-21' },
