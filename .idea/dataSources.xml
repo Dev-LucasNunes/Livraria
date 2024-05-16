@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="livraria_development@localhost" uuid="c644c333-4cce-412c-8f61-83f665eceab5">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/livraria_development</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="livraria: test" uuid="b74766b3-245a-40e5-bc71-6be3a6226dc6">
+    <data-source source="LOCAL" name="livraria: test" uuid="e151132b-483e-48f0-bdc9-bd49c8ca492a">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
@@ -17,22 +10,22 @@
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/livraria_test</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="livraria: production" uuid="93287f6a-6c4e-475a-a204-2d0640c8aeeb">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/livraria_production</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="livraria: development" uuid="f57c6519-ede5-4b90-8a03-54899af64c30">
+    <data-source source="LOCAL" name="livraria: development" uuid="665ffe6d-01ea-415e-94cc-fd5c7c5d3c1a">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/livraria_development</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="livraria: production" uuid="6d36f179-9d52-4da6-8378-91bfbbf86715">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/livraria_production</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
