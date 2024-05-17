@@ -1,20 +1,39 @@
-<div class="mx-auto md:w-2/3 w-full flex flex-col justify-center items-center mt-14 py-8">
-  <div class="mx-auto rounded-[2.5rem] mt-28 py-12 px-8 bg-gray-800">
+<div class="flex flex-col justify-center items-center min-h-screen bg-gray-100">
+  <div class="mx-auto py-4">
     <% if notice.present? %>
-      <p id="danger" class="p-4 relative bottom-6 text-sm text-green-800 rounded-lg bg-green-200 dark:bg-gray-800 dark:text-red-400" role="alert" data-controller="timeout"><%= notice %></p>
+      <p id="danger" class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-200 dark:bg-gray-800 dark:text-red-400" role="alert" data-controller="timeout"><%= notice %></p>
     <% end %>
-
-    <%= render @author %>
   </div>
-  <div class="text-center mt-4">
-    <%= link_to edit_author_path(@author) do %>
-      <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
-        Editar
-      </button>
-    <% end %>
-    <div class="inline-block ml-2">
-      <%= button_to "Excluir",@author, method: :delete, data: {controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?'}, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+  <div class="bg-white shadow-md rounded-[2.5rem] p-8 flex flex-col justify-center items-center w-11/12 md:w-3/4 lg:w-1/2 mb-10">
+    <h1 class="font-bold text-4xl text-blue-600 mb-8">Detalhes do Autor</h1>
+
+    <div class="grid grid-cols-2 gap-4 w-full">
+      <% { "Nome": :name, "Nacionalidade": :nationality, "CPF": :cpf, "Data de Nascimento": :date_of_birth }.each do |label, attribute| %>
+        <div class="flex flex-col items-center w-full">
+          <hr class="w-full my-4 border-gray-400">
+          <p class="font-medium text-center mb-2 text-gray-700"><%= label %>:</p>
+          <p class="text-center text-gray-900">
+            <% if attribute == :cpf %>
+              <% cpf_object = CPF.new(@author.cpf) %>
+              <%= cpf_object.formatted %>
+            <% elsif attribute == :date_of_birth %>
+              <%= @author.date_of_birth.strftime("%d/%m/%Y") if @author.date_of_birth.present? %>
+            <% else %>
+              <%= @author.send(attribute) %>
+            <% end %>
+          </p>
+        </div>
+      <% end %>
     </div>
-    <%= link_to "Voltar", authors_path, class:"text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+
+    <div class="mt-8 flex justify-around w-full">
+      <%= link_to edit_author_path(@author) do %>
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+          Editar
+        </button>
+      <% end %>
+      <%= button_to "Excluir", @author, method: :delete, data: { controller: 'alert', action: 'click->alert#showAlert', alert_title_value: 'Você tem certeza?' }, class: "text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-6 py-2 text-center mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800" %>
+      <%= link_to "Voltar", authors_url, class: "text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+    </div>
   </div>
 </div>

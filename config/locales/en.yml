@@ -27,5 +27,15 @@
 #       "yes": yup
 #       enabled: "ON"
 
-en:
-  hello: "Hello world"
+#en:
+#  hello: "Hello world"
+#
+  en:
+    activerecord:
+      errors:
+        models:
+          book:
+            attributes:
+              author:
+                blank: "Autor deve existir"
+

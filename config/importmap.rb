@@ -8,4 +8,3 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "flowbite", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.turbo.min.js"
 pin "sweetalert2", to: "https://cdn.skypack.dev/sweetalert2"
 
-
