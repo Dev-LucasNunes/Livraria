@@ -1,0 +1,25 @@
+<div class="flex justify-center items-center ">
+  <div id="<%= dom_id author %>">
+    <p class="my-5 ">
+      <strong class="block text-white text-2xl ">Nome: <%= author.name %></strong>
+    </p>
+    <hr class="mb-2">
+
+    <p class="my-5">
+      <strong class="block text-white text-2xl mb-1">Nacionalidade: <%= author.nationality %></strong>
+    </p>
+    <hr class="mb-2">
+
+    <p class="my-5">
+      <strong class="block text-white  text-2xl mb-1"> CPF: <% cpf_object = CPF.new(author.cpf) %> <span class="text-2xl "><%= cpf_object.formatted %></span></strong>
+    </p>
+    <hr class="mb-2">
+
+    <p class="my-5">
+      <strong class="block text-white  text-2xl mb-1">Data de nascimento: <%= author.date_of_birth.strftime("%d/%m/%Y") if author.date_of_birth.present? %></strong>
+    </p>
+    <hr class="mb-2">
+  </div>
+</div>
+
+

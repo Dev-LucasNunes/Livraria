@@ -1,0 +1,80 @@
+<div class="border rounded-[2.5rem] border-blue-700 p-8 flex flex-col justify-center mt-28">
+  <%= form_with(model: @supplier, class: "contents") do |form| %>
+    <% if @supplier.errors.any? %>
+      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+        <ul>
+          <% @supplier.errors.each do |error| %>
+            <% formatted_message = error.full_message %>
+            <% if formatted_message.include?("Name") %>
+              <% formatted_message = formatted_message.gsub("Name can't be blank", "Nome é obrigatório") %>
+            <% elsif  formatted_message.include?("Address") %>
+              <% formatted_message = formatted_message.gsub("Address can't be blank", "Endereço é obrigatório") %>
+            <% elsif  formatted_message.include?("Contact") %>
+              <% formatted_message = formatted_message.gsub("Contact can't be blank", "Contato é obrigatório") %>
+            <% elsif  formatted_message.include?("Cnpj") %>
+              <% formatted_message = formatted_message.gsub("Cnpj can't be blank", "Cnpj é obrigatório") %>
+            <% elsif  formatted_message.include?("Cnpj") %>
+              <% formatted_message = formatted_message.gsub("Cnpj Deve ter 14 dígitos, somente números", "deve ter 14 dígitos, somente números") %>
+            <% end %>
+            <li><%= formatted_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <% if action_name == "new" %>
+      <h1 class="font-bold text-4xl text-blue-600">Novo fornecedor</h1>
+    <% elsif action_name == "edit" %>
+      <h1 class="font-bold text-4xl text-blue-600">Editar fornecedor</h1>
+    <% end %>
+
+    <div class="grid grid-cols-2 gap-4 my-5">
+      <div class="flex flex-col">
+        <%= form.label :name, "Nome:" %>
+        <%= form.text_field :name, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2" %>
+      </div>
+
+      <div class="flex flex-col">
+        <%= form.label :address, "Endereço:" %>
+        <%= form.text_field :address, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2" %>
+      </div>
+
+      <div class="flex flex-col">
+        <%= form.label :contact, "Contato:" %>
+        <%= form.text_field :contact, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2" %>
+      </div>
+
+      <div class="flex flex-col">
+        <%= form.label :cnpj, "CNPJ:" %>
+        <%= form.text_field :cnpj, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2" %>
+      </div>
+
+      <% if @supplier.account %>
+        <div class="flex flex-col">
+          <%= form.label :account, "Conta:" %>
+          <%= form.text_field :account, value: @supplier.account.account, maxlength: 10, pattern: "\d{8,10}", class: "block shadow rounded-md border outline-none px-3 py-2 mt-2", title: "A conta deve ter entre 8 e 10 dígitos" %>
+        </div>
+
+        <div class="flex flex-col w-10">
+          <%= form.label :account_digit, "Dígito:" %>
+          <%= form.text_field :account_digit, value: @supplier.account.account_digit, maxlength: 1, pattern: "\d{1}", class: "block shadow rounded-md border outline-none px-3 py-2 mt-2", title: "O dígito deve ter 1 dígito" %>
+        </div>
+
+        <div class="flex flex-col">
+          <%= form.label :account_type, "Tipo:" %>
+          <%= form.select :account_type, options_for_select([['C/C', 'C/C'], ['Poupança', 'Poupança']], @supplier.account.account_type), { prompt: "Selecione o tipo de conta" }, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2" %>
+        </div>
+
+        <div class="flex flex-col">
+          <%= form.label :bank, "Banco:" %>
+          <%= form.text_field :bank, value: @supplier.account.bank, class: "block shadow rounded-md border outline-none px-3 py-2 mt-2" %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="inline mt-4">
+      <%= form.submit @supplier.persisted? ? "Atualizar fornecedor" : "Criar Fornecedor", class: "mt-4 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+      <%= link_to "Voltar", suppliers_url, class: "mt-4 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" %>
+    </div>
+  <% end %>
+</div>

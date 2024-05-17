@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "flowbite": "^2.3.0",
+    "stimulus": "^3.2.2",
+    "sweetalert2": "^11.10.8",
+    "tailwindcss": "^3.4.3"
+  }
+}
