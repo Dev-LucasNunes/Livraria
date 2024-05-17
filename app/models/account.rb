@@ -1,14 +1,13 @@
 class Account < ApplicationRecord
   belongs_to :supplier
 
-  validates :account, presence: true
+  validates :account, presence: true, length: { in: 8..10 }
   validates :account_digit, presence: true
+  validate :validate_account_digit
   validates :account_type, presence: true
   validates :bank, presence: true
 
-  validate :validate_account_digit
-
-  def validate_account_digit
+  def calculate_verify_digit
     number = self.account
     weight = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5]
     sum = 0
@@ -18,8 +17,17 @@ class Account < ApplicationRecord
     end
 
     rest = sum % 11
-    account_digit = (rest < 2)? 0 : (11 - rest)
+    verify_digit = (rest < 2) ? 0 : (11 - rest)
 
-    self.account_digit = account_digit.to_s
+    verify_digit
+  end
+
+  private
+
+  def validate_account_digit
+    calculated_digit = calculate_verify_digit
+    if self.account_digit != calculated_digit.to_s
+      errors.add(:account_digit, "não é válido. O dígito verificador correto é #{calculated_digit}.")
+    end
   end
 end
