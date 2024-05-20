@@ -20,7 +20,7 @@
             </td>
             <td class="px-16 py-2"><%= book.author.name %></td>
             <td class="px-16 py-2"><%= book.genre %></td>
-            <td class="px-16 py-2"><%= book.publication_date %></td>
+            <td class="px-16 py-2"><%= book.publication_date.strftime("%d/%m/%Y") if book.publication_date.present? %></td>
             <td class="px-16 py-2"><%= book.isbn %></td>
           </tr>
         <% end %>

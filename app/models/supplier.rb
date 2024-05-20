@@ -7,13 +7,6 @@ class Supplier < ApplicationRecord
   validates :contact, presence: true
   validates :cnpj, presence: true
 
-  include PgSearch::Model
-  pg_search_scope :search_by_name, against: :name,
-                  using: {
-                    tsearch: { prefix: true },
-                    trigram: {threshold: 0.1}
-                  }
-
   validate :cnpj_validate
 
   private
@@ -22,7 +15,7 @@ class Supplier < ApplicationRecord
     return unless cnpj.present?
 
     unless CNPJ.valid?(cnpj)
-      errors.add(:cnpj, " não é válido")
+      errors.add(:cnpj, "não é válido")
     end
 
     unless cnpj.length == 14
