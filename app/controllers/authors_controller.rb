@@ -1,13 +1,22 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token, if: :json_request?
 
   # GET /authors or /authors.json
   def index
     @authors = Author.all
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @authors }
+    end
   end
 
   # GET /authors/1 or /authors/1.json
   def show
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @author }
+    end
   end
 
   # GET /authors/new
@@ -50,7 +59,6 @@ class AuthorsController < ApplicationController
   # DELETE /authors/1 or /authors/1.json
   def destroy
     @author.destroy!
-
     respond_to do |format|
       format.html { redirect_to authors_url, notice: "Autor deletado com sucesso." }
       format.json { head :no_content }
@@ -58,13 +66,16 @@ class AuthorsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_author
-      @author = Author.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def author_params
-      params.require(:author).permit(:name, :nationality, :cpf, :date_of_birth)
-    end
+  def set_author
+    @author = Author.find(params[:id])
+  end
+
+  def author_params
+    params.require(:author).permit(:name, :nationality, :cpf, :date_of_birth)
+  end
+
+  def json_request?
+    request.format.json? || request.content_type == 'application/json'
+  end
 end
