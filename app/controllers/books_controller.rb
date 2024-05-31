@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
     respond_to do |format|
-      format.html
+      format.html # index.html.erb
       format.json { render json: @books }
     end
   end
@@ -14,7 +14,7 @@ class BooksController < ApplicationController
   # GET /books/1 or /books/1.json
   def show
     respond_to do |format|
-      format.html
+      format.html # show.html.erb
       format.json { render json: @book }
     end
   end
@@ -59,7 +59,6 @@ class BooksController < ApplicationController
   # DELETE /books/1 or /books/1.json
   def destroy
     @book.destroy!
-
     respond_to do |format|
       format.html { redirect_to books_url, notice: "Livro excluído com sucesso." }
       format.json { head :no_content }
@@ -67,15 +66,14 @@ class BooksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_book
-      @book = Book.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def book_params
-      params.require(:book).permit(:title, :author_id, :genre, :publication_date, :isbn, :photo)
-    end
+  def set_book
+    @book = Book.find(params[:id])
+  end
+
+  def book_params
+    params.require(:book).permit(:title, :author_id, :genre, :publication_date, :isbn, :photo)
+  end
 
   def json_request?
     request.format.json? || request.content_type == 'application/json'
