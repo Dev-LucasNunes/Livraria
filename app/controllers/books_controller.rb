@@ -1,13 +1,22 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token, if: :json_request?
 
   # GET /books or /books.json
   def index
     @books = Book.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @books }
+    end
   end
 
   # GET /books/1 or /books/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @book }
+    end
   end
 
   # GET /books/new
@@ -67,4 +76,8 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:title, :author_id, :genre, :publication_date, :isbn, :photo)
     end
+
+  def json_request?
+    request.format.json? || request.content_type == 'application/json'
+  end
 end
