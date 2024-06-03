@@ -5,18 +5,10 @@ class AuthorsController < ApplicationController
   # GET /authors or /authors.json
   def index
     @authors = Author.all
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @authors }
-    end
   end
 
   # GET /authors/1 or /authors/1.json
   def show
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @author }
-    end
   end
 
   # GET /authors/new
