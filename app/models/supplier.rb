@@ -22,7 +22,7 @@ class Supplier < ApplicationRecord
     return unless cnpj.present?
 
     unless CNPJ.valid?(cnpj)
-      errors.add(:cnpj, " não é válido")
+      errors.add(:cnpj, "não é válido")
     end
 
     unless cnpj.length == 14

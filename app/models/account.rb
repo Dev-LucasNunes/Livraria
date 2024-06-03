@@ -27,7 +27,7 @@ class Account < ApplicationRecord
   def validate_account_digit
     calculated_digit = calculate_verify_digit
     if self.account_digit != calculated_digit.to_s
-      errors.add(:account_digit, "não é válido. O dígito verificador correto é #{calculated_digit}.")
+      errors.add(:account_digit, "não é válido.")
     end
   end
 end

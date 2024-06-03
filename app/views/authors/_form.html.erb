@@ -27,7 +27,7 @@
 
   <div class="my-5">
     <%= form.label :cpf %>
-    <%= form.text_field :cpf, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :cpf, maxlength: 11, pattern: "\\d*", oninput: "this.value=this.value.replace(/\\D/g,'')", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
