@@ -1,5 +1,6 @@
 class SuppliersController < ApplicationController
   before_action :set_supplier, only: %i[show edit update destroy]
+  skip_before_action :verify_authenticity_token, if: :json_request?
 
   # GET /suppliers or /suppliers.json
   def index
@@ -69,5 +70,9 @@ class SuppliersController < ApplicationController
   # Only allow a list of trusted parameters through.
   def supplier_params
     params.require(:supplier).permit(:name, :address, :contact, :cnpj, account_attributes: [:id, :account, :account_digit, :account_type, :bank])
+  end
+
+  def json_request?
+    request.format.json? || request.content_type == 'application/json'
   end
 end

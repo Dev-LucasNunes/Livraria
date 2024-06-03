@@ -1,7 +1,7 @@
 class Account < ApplicationRecord
   belongs_to :supplier
 
-  validates :account, presence: true, length: { in: 8..10 }
+  validates :account, presence: true, length: { in: 7..10 }
   validates :account_digit, presence: true
   validate :validate_account_digit
   validates :account_type, presence: true
